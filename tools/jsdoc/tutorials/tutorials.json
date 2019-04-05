@@ -1,0 +1,11 @@
+{ 
+    "portal": { 
+        "title": "Create a Portal"
+    }, 
+    "avatar-scaling": { 
+        "title": "Create Avatar Scaling Buttons"
+    },
+    "boombox": { 
+        "title": "Create a Boombox"
+    } 
+}
