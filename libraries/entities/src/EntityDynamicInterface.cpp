@@ -130,8 +130,8 @@ variables.  These argument variables are used by the code which is run when bull
  *     <tr><td><code>"ball-socket"</code></td><td>Object constraint</td>
  *       <td>Connects two entities with a ball and socket joint.</td>
  *       <td>{@link Entities.ActionArguments-BallSocket}</td></tr>
- *     <tr><td><code>"spring"</code></td><td>&nbsp;</td><td>Synonym for <code>"tractor"</code>. 
- *       <span class="important">Deprecated.</span></td><td>&nbsp;</td></tr>
+ *     <tr><td><code>"spring"</code></td><td>&nbsp;</td>
+ *       <td><p class="important">Deprecated: Synonym for <code>"tractor"</code>.</p></td><td>&nbsp;</td></tr>
  *   </tbody>
  * </table>
  * @typedef {string} Entities.ActionType
