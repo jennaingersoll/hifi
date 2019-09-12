@@ -57,8 +57,8 @@ class Audio : public AudioScriptingInterface, protected ReadWriteLockable {
      * @property {boolean} clipping - <code>true</code> if the audio input is clipping, otherwise <code>false</code>.
      * @property {string} context - The current context of the audio: either <code>"Desktop"</code> or <code>"HMD"</code>.
      *     <em>Read-only.</em>
-     * @property {object} devices - <em>Read-only.</em>
-     *     <p class="important">Deprecated: This property is deprecated and will be removed.
+     * @property {object} devices - <span class="important">Deprecated: This property is deprecated and will be removed.</span> 
+     *     <p><em>Read-only.</em>
      * @property {boolean} pushToTalk - <code>true</code> if push-to-talk is enabled for the current user context (desktop or 
      *     HMD), otherwise <code>false</code>.
      * @property {boolean} pushToTalkDesktop - <code>true</code> if desktop push-to-talk is enabled, otherwise 

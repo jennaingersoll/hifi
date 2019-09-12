@@ -197,7 +197,7 @@ private:
  *     window in desktop mode or on the HUD surface in HMD mode, <code>false</code> if it isn't. <em>Read-only.</em>
  * @property {Vec2} position - The position of the cursor. This is the position relative to the Interface window in desktop 
  *     mode, and the HUD surface in HMD mode.
- *     <p><strong>Note:</strong> The position values may be negative.</p>
+ *     <p><strong>Note:</strong> The position values may be negative.
  * @property {number} scale=1 - The scale of the reticle circle in desktop mode, and the arrow and reticle circle in HMD mode. 
  *     (Does not affect the size of the arrow in desktop mode.)
  * @property {boolean} visible=true - <code>true</code> if the reticle circle is visible in desktop mode, and the arrow or 
@@ -307,7 +307,7 @@ public:
     /**jsdoc
      * Gets the position of the cursor. This is the position relative to the Interface window in desktop mode, and the HUD 
      * surface in HMD mode.
-     * <p><strong>Note:</strong> The position values may be negative.</p>
+     * <p><strong>Note:</strong> The position values may be negative.
      * @function Reticle.getPosition
      * @returns {Vec2} The position of the cursor.
      */
@@ -316,7 +316,7 @@ public:
     /**jsdoc
      * Sets the position of the cursor. This is the position relative to the Interface window in desktop mode, and the HUD 
      * surface in HMD mode.
-     * <p><strong>Note:</strong> The position values may be negative.</p>
+     * <p><strong>Note:</strong> The position values may be negative.
      * @function Reticle.setPosition
      * @param {Vec2} position - The position of the cursor.
      */

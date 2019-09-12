@@ -57,7 +57,7 @@ public:
      * @param {string} channel - The channel to send the message on.
      * @param {string} message - The message to send.
      * @param {boolean} [localOnly=false] - If <code>false</code> then the message is sent to all Interface, client entity, 
-     *     server entity, and assignment client scripts in the domain.<br />
+     *     server entity, and assignment client scripts in the domain.<p>
      *     If <code>true</code> then: if sent from an Interface or client entity script it is received by all Interface and 
      *     client entity scripts; if sent from a server entity script it is received by all entity server scripts; and if sent 
      *     from an assignment client script it is received only by that same assignment client script.
@@ -105,7 +105,7 @@ public:
      * @param {object} data - The data to send. The data is handled as a byte stream, for example, as may be provided via a 
      *     JavaScript <code>Int8Array</code> object.
      * @param {boolean} [localOnly=false] - If <code>false</code> then the message is sent to all Interface, client entity,
-     *     server entity, and assignment client scripts in the domain.<br />
+     *     server entity, and assignment client scripts in the domain.<p>
      *     If <code>true</code> then: if sent from an Interface or client entity script it is received by all Interface and
      *     client entity scripts; if sent from a server entity script it is received by all entity server scripts; and if sent
      *     from an assignment client script it is received only by that same assignment client script.

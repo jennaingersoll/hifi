@@ -82,7 +82,7 @@ public:
      * starts.
      * <p>This is a synonym for calling {@link ScriptDiscoveryService.loadScript|loadScript} with just the script URL.</p>
      * <p class="availableIn"><strong>Supported Script Types:</strong> Interface Scripts &bull; Avatar Scripts</p>
-     * <p>See also, {@link Script.load}.</p>
+     * <p>See also, {@link Script.load}.
      * @function ScriptDiscoveryService.loadOneScript
      * @param {string} url - The path and name of the script. If a local file, including the <code>"file:///"</code> scheme is 
      *     optional.
@@ -92,7 +92,7 @@ public:
     /**jsdoc
      * Starts running an Interface script, if it isn't already running.
      * <p class="availableIn"><strong>Supported Script Types:</strong> Interface Scripts &bull; Avatar Scripts</p>
-     * <p>See also, {@link Script.load}.</p>
+     * <p>See also, {@link Script.load}.
      * @function ScriptDiscoveryService.loadScript
      * @param {string} [url=""] - The path and name of the script. If a local file, including the <code>"file:///"</code> 
      *     scheme is optional.

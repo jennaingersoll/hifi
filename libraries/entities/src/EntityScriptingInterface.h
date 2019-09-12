@@ -131,8 +131,8 @@ public:
  *     <tr><td><code>leaveEntity</code></td><td>{@link Entities.leaveEntity}</td></tr>
  *     <tr><td><code>mouseDoublePressOnEntity</code></td><td>{@link Entities.mouseDoublePressOnEntity}</td></tr>
  *     <tr><td><code>mouseMoveOnEntity</code></td><td>{@link Entities.mouseMoveOnEntity}</td></tr>
- *     <tr><td><code>mouseMoveEvent</code></td><td><span class="important">Deprecated: Use <code>mouseMoveOnEntity</code> 
- *       instead.</span></td></tr>
+ *     <tr><td><code>mouseMoveEvent</code></td><td><p class="important">Deprecated: Use <code>mouseMoveOnEntity</code> 
+ *       instead.</p></td></tr>
  *     <tr><td><code>mousePressOnEntity</code></td><td>{@link Entities.mousePressOnEntity}</td></tr>
  *     <tr><td><code>mouseReleaseOnEntity</code></td><td>{@link Entities.mouseReleaseOnEntity}</td></tr>
  *   </tbody>
@@ -360,7 +360,7 @@ public slots:
      * <p>Domain entities must have their <code>cloneable</code> property value be <code>true</code> in order to be cloned. A 
      * domain entity can be cloned by a client that doesn't have rez permissions in the domain.</p>
      * <p>Avatar entities must have their <code>cloneable</code> and <code>cloneAvatarEntity</code> property values be 
-     * <code>true</code> in order to be cloned.</p>
+     * <code>true</code> in order to be cloned.
      * @function Entities.cloneEntity
      * @param {Uuid} entityID - The ID of the entity to clone.
      * @returns {Uuid} The ID of the new entity if successfully cloned, otherwise {@link Uuid(0)|Uuid.NULL}.
@@ -455,7 +455,7 @@ public slots:
      *     ...
      * };</code></pre>
      * <p>Alternatively, you can use {@link Entities.emitScriptEvent} and {@link Entities.webEventReceived} to exchange
-     * messages with a Web entity over its event bridge.</p>
+     * messages with a Web entity over its event bridge.
      * @function Entities.getEntityObject
      * @param {Uuid} id - The ID of the entity to get the script object for.
      * @returns {object} The script object for the entity if found.
@@ -536,7 +536,7 @@ public slots:
      * Calculates the size of some text in a {@link Entities.EntityProperties-Text|Text} entity. The entity need not be set 
      * visible.
      * <p><strong>Note:</strong> The size of text in a Text entity cannot be calculated immediately after the
-     * entity is created; a short delay is required while the entity finishes being created.</p>
+     * entity is created; a short delay is required while the entity finishes being created.
      * @function Entities.textSize
      * @param {Uuid} id - The ID of the Text entity to use for calculation.
      * @param {string} text - The string to calculate the size of.
@@ -1793,7 +1793,7 @@ public slots:
      * });</code></pre>
      * <p>Use {@link Entities.webEventReceived} to receive messages from the Web entity's HTML page.</p>
      * <p>Alternatively, you can use {@link Entities.getEntityObject} to exchange messages over a Web entity's HTML event
-     * bridge.</p>
+     * bridge.
      * @function Entities.emitScriptEvent
      * @param {Uuid} entityID - The ID of the Web entity to send the message to.
      * @param {string} message - The message to send.
@@ -2130,7 +2130,7 @@ signals:
     /**jsdoc
      * Triggered on the client that is the physics simulation owner during the collision of two entities. Note: Isn't triggered
      * for a collision with an avatar.
-     * <p>See also, {@link Entities|Entity Methods} and {@link Script.addEventHandler}.</p>
+     * <p>See also, {@link Entities|Entity Methods} and {@link Script.addEventHandler}.
      * @function Entities.collisionWithEntity
      * @param {Uuid} idA - The ID of one entity in the collision. For an entity script, this is the ID of the entity containing 
      *     the script.
@@ -2243,7 +2243,7 @@ signals:
     /**jsdoc
      * Triggered when a mouse button is clicked while the mouse cursor is on an entity, or a controller trigger is fully 
      * pressed while its laser is on an entity.
-     * <p>See also, {@link Entities|Entity Methods} and {@link Script.addEventHandler}.</p>
+     * <p>See also, {@link Entities|Entity Methods} and {@link Script.addEventHandler}.
      * @function Entities.mousePressOnEntity
      * @param {Uuid} entityID - The ID of the entity that was pressed on.
      * @param {PointerEvent} event - Details of the event.
@@ -2268,7 +2268,7 @@ signals:
 
     /**jsdoc
      * Repeatedly triggered while the mouse cursor or controller laser moves on an entity.
-     * <p>See also, {@link Entities|Entity Methods} and {@link Script.addEventHandler}.</p>
+     * <p>See also, {@link Entities|Entity Methods} and {@link Script.addEventHandler}.
      * @function Entities.mouseMoveOnEntity
      * @param {Uuid} entityID - The ID of the entity that was moved on.
      * @param {PointerEvent} event - Details of the event.
@@ -2279,7 +2279,7 @@ signals:
     /**jsdoc
      * Triggered when a mouse button is released after clicking on an entity or the controller trigger is partly or fully 
      * released after pressing on an entity, even if the mouse pointer or controller laser has moved off the entity.
-     * <p>See also, {@link Entities|Entity Methods} and {@link Script.addEventHandler}.</p>
+     * <p>See also, {@link Entities|Entity Methods} and {@link Script.addEventHandler}.
      * @function Entities.mouseReleaseOnEntity
      * @param {Uuid} entityID - The ID of the entity that was originally pressed.
      * @param {PointerEvent} event - Details of the event.
@@ -2306,7 +2306,7 @@ signals:
 
     /**jsdoc
      * Triggered when a mouse button is clicked while the mouse cursor is on an entity. Note: Not triggered by controllers.
-     * <p>See also, {@link Entities|Entity Methods} and {@link Script.addEventHandler}.</p>
+     * <p>See also, {@link Entities|Entity Methods} and {@link Script.addEventHandler}.
      * @function Entities.clickDownOnEntity
      * @param {Uuid} entityID - The ID of the entity that was clicked on.
      * @param {PointerEvent} event - Details of the event.
@@ -2340,7 +2340,7 @@ signals:
     /**jsdoc
      * Repeatedly triggered while a mouse button continues to be held after clicking an entity, even if the mouse cursor has 
      * moved off the entity. Note: Not triggered by controllers.
-     * <p>See also, {@link Entities|Entity Methods} and {@link Script.addEventHandler}.</p>
+     * <p>See also, {@link Entities|Entity Methods} and {@link Script.addEventHandler}.
      * @function Entities.holdingClickOnEntity
      * @param {Uuid} entityID - The ID of the entity that was originally clicked.
      * @param {PointerEvent} event - Details of the event.
@@ -2351,7 +2351,7 @@ signals:
     /**jsdoc
      * Triggered when a mouse button is released after clicking on an entity, even if the mouse cursor has moved off the 
      * entity. Note: Not triggered by controllers.
-     * <p>See also, {@link Entities|Entity Methods} and {@link Script.addEventHandler}.</p>
+     * <p>See also, {@link Entities|Entity Methods} and {@link Script.addEventHandler}.
      * @function Entities.clickReleaseOnEntity
      * @param {Uuid} entityID - The ID of the entity that was originally clicked.
      * @param {PointerEvent} event - Details of the event.
@@ -2361,7 +2361,7 @@ signals:
 
     /**jsdoc
      * Triggered when the mouse cursor or controller laser starts hovering on an entity.
-     * <p>See also, {@link Entities|Entity Methods} and {@link Script.addEventHandler}.</p>
+     * <p>See also, {@link Entities|Entity Methods} and {@link Script.addEventHandler}.
      * @function Entities.hoverEnterEntity
      * @param {Uuid} entityID - The ID of the entity that is being hovered.
      * @param {PointerEvent} event - Details of the event.
@@ -2371,7 +2371,7 @@ signals:
 
     /**jsdoc
      * Repeatedly triggered when the mouse cursor or controller laser moves while hovering over an entity.
-     * <p>See also, {@link Entities|Entity Methods} and {@link Script.addEventHandler}.</p>
+     * <p>See also, {@link Entities|Entity Methods} and {@link Script.addEventHandler}.
      * @function Entities.hoverOverEntity
      * @param {Uuid} entityID - The ID of the entity that is being hovered.
      * @param {PointerEvent} event - Details of the event.
@@ -2381,7 +2381,7 @@ signals:
 
     /**jsdoc
      * Triggered when the mouse cursor or controller laser stops hovering over an entity.
-     * <p>See also, {@link Entities|Entity Methods} and {@link Script.addEventHandler}.</p>
+     * <p>See also, {@link Entities|Entity Methods} and {@link Script.addEventHandler}.
      * @function Entities.hoverLeaveEntity
      * @param {Uuid} entityID - The ID of the entity that was being hovered.
      * @param {PointerEvent} event - Details of the event.
@@ -2392,7 +2392,7 @@ signals:
 
     /**jsdoc
      * Triggered when an avatar enters an entity, but only if the entity has an entity method exposed for this event.
-     * <p>See also, {@link Entities|Entity Methods} and {@link Script.addEventHandler}.</p>
+     * <p>See also, {@link Entities|Entity Methods} and {@link Script.addEventHandler}.
      * @function Entities.enterEntity
      * @param {Uuid} entityID - The ID of the entity that the avatar entered.
      * @returns {Signal}
@@ -2401,7 +2401,7 @@ signals:
 
     /**jsdoc
      * Triggered when an avatar leaves an entity, but only if the entity has an entity method exposed for this event.
-     * <p>See also, {@link Entities|Entity Methods} and {@link Script.addEventHandler}.</p>
+     * <p>See also, {@link Entities|Entity Methods} and {@link Script.addEventHandler}.
      * @function Entities.leaveEntity
      * @param {Uuid} entityID - The ID of the entity that the avatar left.
      * @returns {Signal}
@@ -2478,7 +2478,7 @@ signals:
      * <pre class="prettyprint"><code>EventBridge.emitWebEvent(message);</code></pre>
      * <p>Use {@link Entities.emitScriptEvent} to send messages to the Web entity's HTML page.</p>
      * <p>Alternatively, you can use {@link Entities.getEntityObject} to exchange messages over a Web entity's HTML event 
-     * bridge.</p>
+     * bridge.
      * @function Entities.webEventReceived
      * @param {Uuid} entityID - The ID of the Web entity that the message was received from.
      * @param {string} message - The message received.

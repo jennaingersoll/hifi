@@ -11,8 +11,8 @@
 #include "Camera.h"
 
 /**jsdoc
- * <p>Camera modes affect the position of the camera and the controls for camera movement. The camera can be in one of the
- * following modes:</p>
+ * Camera modes affect the position of the camera and the controls for camera movement. The camera can be in one of the
+ * following modes:
  * <table>
  *   <thead>
  *     <tr>

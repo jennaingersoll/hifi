@@ -113,7 +113,7 @@ public slots:
     /**jsdoc
      * Kicks and bans a user. This removes them from the server and prevents them from returning. The ban is by user name if 
      * available, or machine fingerprint otherwise.
-     * <p>This function only works if you're an administrator of the domain you're in.</p>
+     * <p>This function only works if you're an administrator of the domain you're in.
      * @function Users.kick
      * @param {Uuid} sessionID - The session ID of the user to kick and ban.
      */
@@ -121,7 +121,7 @@ public slots:
 
     /**jsdoc
      * Mutes a user's microphone for everyone. The mute is not permanent: the user can unmute themselves. 
-     * <p>This function only works if you're an administrator of the domain you're in.</p>
+     * <p>This function only works if you're an administrator of the domain you're in.
      * @function Users.mute
      * @param {Uuid} sessionID - The session ID of the user to mute.
      */
@@ -130,7 +130,7 @@ public slots:
     /**jsdoc
      * Requests the user name and machine fingerprint associated with the given UUID. The user name is returned via a 
      * {@link Users.usernameFromIDReply|usernameFromIDReply} signal.
-     * <p>This function only works if you're an administrator of the domain you're in.</p>
+     * <p>This function only works if you're an administrator of the domain you're in.
      * @function Users.requestUsernameFromID
      * @param {Uuid} sessionID - The session ID of the user to get the user name and machine fingerprint of.
      * @example <caption>Report the user name and fingerprint of a nearby user.</caption>

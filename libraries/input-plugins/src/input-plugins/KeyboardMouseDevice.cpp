@@ -275,11 +275,11 @@ controller::Input KeyboardMouseDevice::InputDevice::makeInput(KeyboardMouseDevic
  *     <tr><td><code>MouseWheelLeft</code></td><td>number</td><td>number</td><td>The mouse wheel rotated left. The data value 
  *       is the number of units rotated (typically <code>1.0</code>).</td></tr>
  *     <tr><td><code>MouseWheelUp</code></td><td>number</td><td>number</td><td>The mouse wheel rotated up. The data value 
- *       is the number of units rotated (typically <code>1.0</code>).<br />
+ *       is the number of units rotated (typically <code>1.0</code>).<p>
  *       <strong>Warning:</strong> The mouse wheel in an ordinary mouse generates left/right wheel events instead of 
  *       up/down.</td></tr>
  *     <tr><td><code>MouseWheelDown</code></td><td>number</td><td>number</td><td>The mouse wheel rotated down. The data value 
- *       is the number of units rotated (typically <code>1.0</code>).<br />
+ *       is the number of units rotated (typically <code>1.0</code>).<p>
  *       <strong>Warning:</strong> The mouse wheel in an ordinary mouse generates left/right wheel events instead of 
  *       up/down.</td></tr>
   *     <tr><td><code>TouchpadRight</code></td><td>number</td><td>number</td><td>The average touch on a touch-enabled device 

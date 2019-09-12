@@ -513,7 +513,7 @@ int WindowScriptingInterface::openMessageBox(QString title, QString text, int bu
 }
 
 /**jsdoc
- * <p>The buttons that may be included in a message box created by {@link Window.openMessageBox|openMessageBox} are defined by
+ * The buttons that may be included in a message box created by {@link Window.openMessageBox|openMessageBox} are defined by
  * numeric values:
  * <table>
  *   <thead>

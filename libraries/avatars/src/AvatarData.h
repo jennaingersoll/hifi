@@ -117,7 +117,7 @@ const int COLLIDE_WITH_OTHER_AVATARS = 11; // 12th bit
 const int HAS_HERO_PRIORITY = 12; // 13th bit  (be scared)
 
 /**jsdoc
- * <p>The pointing state of the hands is specified by the following values:</p>
+ * The pointing state of the hands is specified by the following values:
  * <table>
  *   <thead>
  *     <tr><th>Value</th><th>Description</th>
@@ -520,8 +520,8 @@ class AvatarData : public QObject, public SpatiallyNestable {
      * @property {boolean} lookAtSnappingEnabled=true - <code>true</code> if the avatar's eyes snap to look at another avatar's
      *     eyes when the other avatar is in the line of sight and also has <code>lookAtSnappingEnabled == true</code>.
      * @property {string} skeletonModelURL - The avatar's FST file.
-     * @property {AttachmentData[]} attachmentData - Information on the avatar's attachments.
-     *     <p class="important">Deprecated: This property is deprecated and will be removed. Use avatar entities instead.</p>
+     * @property {AttachmentData[]} attachmentData - <span class="important">Deprecated: This property is deprecated and will 
+     *     be removed. Use avatar entities instead.</span> <p>Information on the avatar's attachments.
      * @property {string[]} jointNames - The list of joints in the current avatar model. <em>Read-only.</em>
      * @property {Uuid} sessionUUID - Unique ID of the avatar in the domain. <em>Read-only.</em>
      * @property {Mat4} sensorToWorldMatrix - The scale, rotation, and translation transform from the user's real world to the
@@ -767,7 +767,7 @@ public:
      * kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, 
      * the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate 
      * joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set 
-     * the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.</p>
+     * the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
      * @function Avatar.setJointData
      * @param {number} index - The index of the joint.
      * @param {Quat} rotation - The rotation of the joint relative to its parent.
@@ -797,7 +797,7 @@ public:
      * kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, 
      * the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate 
      * joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set 
-     * the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.</p>
+     * the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
      * @function Avatar.setJointRotation
      * @param {number} index - The index of the joint.
      * @param {Quat} rotation - The rotation of the joint relative to its parent.
@@ -811,7 +811,7 @@ public:
      * kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, 
      * the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate 
      * joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set 
-     * the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.</p>
+     * the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
      * @function Avatar.setJointTranslation
      * @param {number} index - The index of the joint.
      * @param {Vec3} translation - The translation of the joint relative to its parent, in model coordinates.
@@ -821,7 +821,7 @@ public:
     /**jsdoc
      * Clears joint translations and rotations set by script for a specific joint. This restores all motion from the default 
      * animation system including inverse kinematics for that joint.
-     * <p>Note: This is slightly faster than the function variation that specifies the joint name.</p>
+     * <p>Note: This is slightly faster than the function variation that specifies the joint name.
      * @function Avatar.clearJointData
      * @param {number} index - The index of the joint.
      */
@@ -848,7 +848,7 @@ public:
      * Gets the translation of a joint relative to its parent, in model coordinates.
      * <p><strong>Warning:</strong> These coordinates are not necessarily in meters.</p>
      * <p>For information on the joint hierarchy used, see 
-     * <a href="https://docs.highfidelity.com/create/avatars/avatar-standards">Avatar Standards</a>.</p>
+     * <a href="https://docs.highfidelity.com/create/avatars/avatar-standards">Avatar Standards</a>.
      * @function Avatar.getJointTranslation
      * @param {number} index - The index of the joint.
      * @returns {Vec3} The translation of the joint relative to its parent, in model coordinates.
@@ -862,7 +862,7 @@ public:
      * kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, 
      * the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate 
      * joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set 
-     * the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.</p>
+     * the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
      * @function Avatar.setJointData
      * @param {string} name - The name of the joint.
      * @param {Quat} rotation - The rotation of the joint relative to its parent.
@@ -876,7 +876,7 @@ public:
      * kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, 
      * the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate 
      * joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set 
-     * the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.</p>
+     * the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
      * @function Avatar.setJointRotation
      * @param {string} name - The name of the joint.
      * @param {Quat} rotation - The rotation of the joint relative to its parent.
@@ -910,7 +910,7 @@ public:
      * kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, 
      * the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate 
      * joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set 
-     * the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.</p>
+     * the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
      * @function Avatar.setJointTranslation
      * @param {string} name - The name of the joint.
      * @param {Vec3} translation - The translation of the joint relative to its parent, in model coordinates.
@@ -932,7 +932,7 @@ public:
     /**jsdoc
      * Clears joint translations and rotations set by script for a specific joint. This restores all motion from the default 
      * animation system including inverse kinematics for that joint.
-     * <p>Note: This is slightly slower than the function variation that specifies the joint index.</p>
+     * <p>Note: This is slightly slower than the function variation that specifies the joint index.
      * @function Avatar.clearJointData
      * @param {string} name - The name of the joint.
      * @example <caption>Offset and restore the position of your avatar's head.</caption>
@@ -973,7 +973,7 @@ public:
      * Gets the translation of a joint relative to its parent, in model coordinates.
      * <p><strong>Warning:</strong> These coordinates are not necessarily in meters.</p>
      * <p>For information on the joint hierarchy used, see
-     * <a href="https://docs.highfidelity.com/create/avatars/avatar-standards">Avatar Standards</a>.</p>
+     * <a href="https://docs.highfidelity.com/create/avatars/avatar-standards">Avatar Standards</a>.
      * @function Avatar.getJointTranslation
      * @param {number} name - The name of the joint.
      * @returns {Vec3} The translation of the joint relative to its parent, in model coordinates.
@@ -999,7 +999,7 @@ public:
     /**jsdoc
      * Gets the translations of all joints in the current avatar. Each joint's translation is relative to its parent joint, in
      * model coordinates.
-     * <p><strong>Warning:</strong> These coordinates are not necessarily in meters.</p>
+     * <p><strong>Warning:</strong> These coordinates are not necessarily in meters.
      * @function Avatar.getJointTranslations
      * @returns {Vec3[]} The translations of all joints relative to each's parent, in model coordinates. The values are in the 
      *     same order as the array returned by {@link MyAvatar.getJointNames}, or {@link Avatar.getJointNames} if using the 
@@ -1013,7 +1013,7 @@ public:
      * kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints,
      * the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate
      * joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set
-     * the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.</p>
+     * the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
      * @function Avatar.setJointRotations
      * @param {Quat[]} jointRotations - The rotations for all joints in the avatar. The values are in the same order as the 
      * array returned by {@link MyAvatar.getJointNames}, or {@link Avatar.getJointNames} if using the <code>Avatar</code> API.
@@ -1053,7 +1053,7 @@ public:
      * kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints,
      * the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate
      * joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set
-     * the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.</p>
+     * the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
      * @function Avatar.setJointTranslations
      * @param {Vec3[]} translations - The translations for all joints in the avatar, in model coordinates. The values are in 
      *     the same order as the array returned by {@link MyAvatar.getJointNames}, or {@link Avatar.getJointNames} if using the 
@@ -1589,7 +1589,7 @@ public slots:
 
     /**jsdoc
      * Gets the rotation of a joint relative to the avatar.
-     * <p><strong>Warning:</strong> Not able to be used in the <code>Avatar</code> API.</p>
+     * <p><strong>Warning:</strong> Not able to be used in the <code>Avatar</code> API.
      * @function Avatar.getAbsoluteJointRotationInObjectFrame
      * @param {number} index - The index of the joint. <em>Not used.</em>
      * @returns {Quat} <code>Quat.IDENTITY</code>.
@@ -1598,7 +1598,7 @@ public slots:
 
     /**jsdoc
      * Gets the translation of a joint relative to the avatar.
-     * <p><strong>Warning:</strong> Not able to be used in the <code>Avatar</code> API.</p>
+     * <p><strong>Warning:</strong> Not able to be used in the <code>Avatar</code> API.
      * @function Avatar.getAbsoluteJointTranslationInObjectFrame
      * @param {number} index - The index of the joint. <em>Not used.</em>
      * @returns {Vec3} <code>Vec3.ZERO</code>.
@@ -1607,7 +1607,7 @@ public slots:
 
     /**jsdoc
      * Sets the rotation of a joint relative to the avatar.
-     * <p><strong>Warning:</strong> Not able to be used in the <code>Avatar</code> API.</p>
+     * <p><strong>Warning:</strong> Not able to be used in the <code>Avatar</code> API.
      * @function Avatar.setAbsoluteJointRotationInObjectFrame
      * @param {number} index - The index of the joint. <em>Not used.</em>
      * @param {Quat} rotation - The rotation of the joint relative to the avatar. <em>Not used.</em>
@@ -1617,7 +1617,7 @@ public slots:
 
     /**jsdoc
      * Sets the translation of a joint relative to the avatar.
-     * <p><strong>Warning:</strong> Not able to be used in the <code>Avatar</code> API.</p>
+     * <p><strong>Warning:</strong> Not able to be used in the <code>Avatar</code> API.
      * @function Avatar.setAbsoluteJointTranslationInObjectFrame
      * @param {number} index - The index of the joint. <em>Not used.</em>
      * @param {Vec3} translation - The translation of the joint relative to the avatar. <em>Not used.</em>

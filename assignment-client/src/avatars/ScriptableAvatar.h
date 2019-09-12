@@ -61,9 +61,9 @@
  *     rather than Interface clients. The result is unique among all avatars present in the domain at the time.
  * @property {boolean} lookAtSnappingEnabled=true - <code>true</code> if the avatar's eyes snap to look at another avatar's
  *     eyes when the other avatar is in the line of sight and also has <code>lookAtSnappingEnabled == true</code>.
- * @property {string} skeletonModelURL - The avatar's FST file.
- * @property {AttachmentData[]} attachmentData - Information on the avatar's attachments. 
- *     <p class="important">Deprecated: This property is deprecated and will be removed. Use avatar entities instead.</p>
+ * @property {string} skeletonModelURL - The avatar's FST file.                                                                                        
+ * @property {AttachmentData[]} attachmentData - <span class="important">Deprecated: This property is deprecated and will be 
+       removed. Use avatar entities instead.</span> <p>Information on the avatar's attachments. 
  * @property {string[]} jointNames - The list of joints in the current avatar model. <em>Read-only.</em>
  * @property {Uuid} sessionUUID - Unique ID of the avatar in the domain. <em>Read-only.</em>
  * @property {Mat4} sensorToWorldMatrix - The scale, rotation, and translation transform from the user's real world to the
@@ -100,7 +100,7 @@ public:
      * @param {string} url - The animation file's URL. Animation files need to be in glTF or FBX format but only need to 
      *     contain the avatar skeleton and animation data. glTF models may be in JSON or binary format (".gltf" or ".glb" URLs 
      *     respectively).
-     *     <p><strong>Warning:</strong> glTF animations currently do not always animate correctly.</p>
+     *     <p><strong>Warning:</strong> glTF animations currently do not always animate correctly.
      * @param {number} [fps=30] - The frames per second (FPS) rate for the animation playback. 30 FPS is normal speed.
      * @param {number} [priority=1] - <em>Not used.</em>
      * @param {boolean} [loop=false] - <code>true</code> if the animation should loop, <code>false</code> if it shouldn't.
@@ -162,7 +162,7 @@ public:
 
     /**jsdoc
      * Gets details of all avatar entities.
-     * <p><strong>Warning:</strong> Potentially an expensive call. Do not use if possible.</p>
+     * <p><strong>Warning:</strong> Potentially an expensive call. Do not use if possible.
      * @function Avatar.getAvatarEntityData
      * @returns {AvatarEntityMap} Details of the avatar entities.
      * @example <caption>Report the current avatar entities.</caption>
@@ -173,7 +173,7 @@ public:
 
     /**jsdoc
      * Sets all avatar entities from an object.
-     * <p><strong>Warning:</strong> Potentially an expensive call. Do not use if possible.</p>
+     * <p><strong>Warning:</strong> Potentially an expensive call. Do not use if possible.
      * @function Avatar.setAvatarEntityData
      * @param {AvatarEntityMap} avatarEntityData - Details of the avatar entities.
      */

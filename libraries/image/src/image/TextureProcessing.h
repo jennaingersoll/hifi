@@ -31,7 +31,7 @@ namespace image {
 namespace TextureUsage {
 
 /**jsdoc
- * <p>Describes the type of texture.</p>
+ * Describes the type of texture.
  * <p>See also: {@link Material} and 
  * {@link https://docs.highfidelity.com/create/3d-models/pbr-materials-guide.html|PBR Materials Guide}.</p>
  * <table>

@@ -112,7 +112,7 @@ public:
     void clearPendingCheckins() { _checkInPacketsSinceLastReply = 0; }
 
     /**jsdoc
-     * <p>The reasons that you may be refused connection to a domain are defined by numeric values:</p>
+     * The reasons that you may be refused connection to a domain are defined by numeric values:
      * <table>
      *   <thead>
      *     <tr>

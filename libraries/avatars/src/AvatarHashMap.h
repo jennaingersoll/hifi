@@ -82,7 +82,7 @@ public:
     /**jsdoc
      * Gets the IDs of all avatars in the domain.
      * <p><strong>Warning:</strong> If the AC script is acting as an avatar (i.e., <code>Agent.isAvatar == true</code>) the 
-     * avatar's ID is NOT included in results.</p>
+     * avatar's ID is NOT included in results.
      * @function AvatarList.getAvatarIdentifiers
      * @returns {Uuid[]} The IDs of all avatars in the domain (excluding AC script's avatar).
      * @example <caption>Report the IDS of all avatars within the domain.</caption>
@@ -94,7 +94,7 @@ public:
     /**jsdoc
      * Gets the IDs of all avatars within a specified distance from a point.
      * <p><strong>Warning:</strong> If the AC script is acting as an avatar (i.e., <code>Agent.isAvatar == true</code>) the
-     * avatar's ID is NOT included in results.</p>
+     * avatar's ID is NOT included in results.
      * @function AvatarList.getAvatarsInRange
      * @param {Vec3} position - The point about which the search is performed.
      * @param {number} range - The search radius.

@@ -19,7 +19,7 @@
 #include <QString>
 
 /**jsdoc
-* <p>A <code>BoxFace</code> specifies the face of an axis-aligned (AA) box.
+* A <code>BoxFace</code> specifies the face of an axis-aligned (AA) box.
 * <table>
 *   <thead>
 *     <tr><th>Value</th><th>Description</th></tr>

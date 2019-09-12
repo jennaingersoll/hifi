@@ -15,13 +15,7 @@ var self = this;
     <tbody>
         <tr>
             <td>
-                <?js if (data.description) { ?>
-                    <p><?js= data.description ?></p>
-                <?js } else { ?>
-                    <p style="color:red;">&nbsp;</p>
-                <?js } ?>                    
-
-                <?js= self.partial('details.tmpl', data) ?>
+                <?js= self.partial('memberDetails.tmpl', data) ?>
                 <?js if (data.examples && examples.length) { ?>
                     <h5>Example<?js= examples.length > 1? 's':'' ?></h5>
                     <?js= this.partial('examples.tmpl', examples) ?>

@@ -21,7 +21,7 @@
 #include <PickFilter.h>
 
 /**jsdoc
- * <p>The type of an intersection.</p>
+ * The type of an intersection.
  * <table>
  *   <thead>
  *     <tr><th>Name</th><th>Value</th><th>Description</th></tr>
@@ -94,7 +94,7 @@ public:
      */
 
      /**jsdoc
-     * <p>A type of pick.</p>
+     * A type of pick.
      * <table>
      *   <thead>
      *     <tr><th>Value</th><th>Description</th></tr>

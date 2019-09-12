@@ -405,7 +405,7 @@ public slots:
     void print(const QString& label, const glm::quat& q, bool asDegrees = false);
 
     /**jsdoc
-     * Tests whether two quaternions are equal. <strong>Note:</strong> The quaternions must be exactly equal in order for 
+     * Tests whether two quaternions are equal. <p><strong>Note:</strong> The quaternions must be exactly equal in order for 
      * <code>true</code> to be returned; it is often better to use {@link Quat(0).dot|Quat.dot} and test for closeness to +/-1.
      * @function Quat(0).equal
      * @param {Quat} q1 - The first quaternion.

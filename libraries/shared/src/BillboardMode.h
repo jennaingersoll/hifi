@@ -12,7 +12,7 @@
 #include "QString"
 
 /**jsdoc
- * <p>How an entity is billboarded.</p>
+ * How an entity is billboarded.
  * <table>
  *   <thead>
  *     <tr><th>Value</th><th>Description</th></tr>

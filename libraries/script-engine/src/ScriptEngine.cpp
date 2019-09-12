@@ -2225,7 +2225,7 @@ void ScriptEngine::loadEntityScript(const EntityItemID& entityID, const QString&
 /**jsdoc
  * Triggered when the script starts for a user. See also, {@link Script.entityScriptPreloadFinished}.
  * <p>Note: Can only be connected to via <code>this.preload = function (...) { ... }</code> in the entity script.</p>
- * <p class="availableIn"><strong>Supported Script Types:</strong> Client Entity Scripts &bull; Server Entity Scripts</p>
+ * <p class="availableIn"><strong>Supported Script Types:</strong> Client Entity Scripts &bull; Server Entity Scripts
  * @function Entities.preload
  * @param {Uuid} entityID - The ID of the entity that the script is running in.
  * @returns {Signal}
@@ -2431,7 +2431,7 @@ void ScriptEngine::entityScriptContentAvailable(const EntityItemID& entityID, co
 /**jsdoc
  * Triggered when the script terminates for a user.
  * <p>Note: Can only be connected to via <code>this.unoad = function () { ... }</code> in the entity script.</p>
- * <p class="availableIn"><strong>Supported Script Types:</strong> Client Entity Scripts &bull; Server Entity Scripts</p>
+ * <p class="availableIn"><strong>Supported Script Types:</strong> Client Entity Scripts &bull; Server Entity Scripts
  * @function Entities.unload
  * @param {Uuid} entityID - The ID of the entity that the script is running in.
  * @returns {Signal}

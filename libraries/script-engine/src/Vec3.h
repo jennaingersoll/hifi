@@ -295,7 +295,7 @@ public slots:
     /**jsdoc
      * Tests whether two vectors are equal.
      * <p><strong>Note:</strong> The vectors must be exactly equal in order for <code>true</code> to be returned; it is often 
-     * better to use {@link Vec3(0).withinEpsilon|withinEpsilon}.</p>
+     * better to use {@link Vec3(0).withinEpsilon|withinEpsilon}.
      * @function Vec3(0).equal
      * @param {Vec3} v1 - The first vector.
      * @param {Vec3} v2 - The second vector.
@@ -315,7 +315,7 @@ public slots:
     
     /**jsdoc
      * Tests whether two vectors are equal within a tolerance.
-     * <p><strong>Note:</strong> It is often better to use this function than {@link Vec3(0).equal|equal}.</p>
+     * <p><strong>Note:</strong> It is often better to use this function than {@link Vec3(0).equal|equal}.
      * @function Vec3(0).withinEpsilon
      * @param {Vec3} v1 - The first vector.
      * @param {Vec3} v2 - The second vector.

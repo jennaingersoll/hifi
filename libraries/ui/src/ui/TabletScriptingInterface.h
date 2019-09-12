@@ -50,15 +50,14 @@ class OffscreenQmlSurface;
  * @hifi-avatar
  */
 /**jsdoc
- * The <code>tabletInterface</code> API provides the facilities to work with the system or other tablet.
+ * @deprecated This API is deprecated and will be removed. Use {@link Tablet} instead.
+ * <p>The <code>tabletInterface</code> API provides the facilities to work with the system or other tablet.</p>
  *
  * @namespace tabletInterface
  *
  * @hifi-interface
  * @hifi-client-entity
  * @hifi-avatar
- *
- * @deprecated This API is deprecated and will be removed. Use {@link Tablet} instead.
  *
  * @borrows Tablet.getTablet as getTablet
  * @borrows Tablet.playSound as playSound
@@ -134,7 +133,7 @@ signals:
     /**jsdoc
      * Triggered when a tablet message or dialog is displayed on the tablet that needs the user's attention.
      * <p><strong>Note:</strong> Only triggered if the script is running in the same script engine as the script that created 
-     * the tablet. By default, this means in scripts included as part of the default scripts.</p>
+     * the tablet. By default, this means in scripts included as part of the default scripts.
      * @function Tablet.tabletNotification
      * @returns {Signal}
      */

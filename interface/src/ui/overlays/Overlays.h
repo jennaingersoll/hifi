@@ -68,13 +68,13 @@ public:
 };
 
 /**jsdoc
+ * <p class="important">3D overlays are deprecated: Use local {@link Entities} for these instead.</p>
  * The <code>Overlays</code> API provides facilities to create and interact with overlays. These are 2D and 3D objects visible 
  * only to yourself and that aren't persisted to the domain. They are used for UI.
  *
  * <p><strong>Note:</strong> 3D overlays are local {@link Entities}, internally, so many of the methods also work with 
  * entities.</p>
  *
- * <p class="important">3D overlays are deprecated: Use local {@link Entities} for these instead.</p>
  *
  * @namespace Overlays
  *
@@ -141,7 +141,7 @@ public slots:
 
     /**jsdoc
      * Creates a clone of an existing overlay (or entity).
-     * <p>Note: For cloning behavior of 3D overlays and entities, see {@link Entities.cloneEntity}.</p>
+     * <p>Note: For cloning behavior of 3D overlays and entities, see {@link Entities.cloneEntity}.
      * @function Overlays.cloneOverlay
      * @param {Uuid} id - The ID of the overlay (or entity) to clone.
      * @returns {Uuid} The ID of the new overlay (or entity) if successful, otherwise {@link Uuid(0)|Uuid.NULL}.
@@ -313,7 +313,7 @@ public slots:
 
     /**jsdoc
      * Gets a specified property value of a 3D overlay (or entity).
-     * <p><strong>Note:</strong> 2D overlays' property values cannot be retrieved.</p>
+     * <p><strong>Note:</strong> 2D overlays' property values cannot be retrieved.
      * @function Overlays.getProperty
      * @param {Uuid} id - The ID of the 3D overlay (or entity).
      * @param {string} property - The name of the property to get the value of.
@@ -333,7 +333,7 @@ public slots:
 
     /**jsdoc
      * Gets specified property values of a 3D overlay (or entity).
-     * <p><strong>Note:</strong> 2D overlays' property values cannot be retrieved.</p>
+     * <p><strong>Note:</strong> 2D overlays' property values cannot be retrieved.
      * @function Overlays.getProperties
      * @param {Uuid} id - The ID of the overlay (or entity).
      * @param {Array.<string>} properties - The names of the properties to get the values of.
@@ -467,7 +467,7 @@ public slots:
     /**jsdoc
      * Calculates the size of some text in a text overlay (or entity). The overlay (or entity) need not be set visible.
      * <p><strong>Note:</strong> The size of text in a 3D overlay (or entity) cannot be calculated immediately after the 
-     * overlay (or entity) is created; a short delay is required while the overlay (or entity) finishes being created.</p>
+     * overlay (or entity) is created; a short delay is required while the overlay (or entity) finishes being created.
      * @function Overlays.textSize
      * @param {Uuid} id - The ID of the overlay (or entity) to use for calculation.
      * @param {string} text - The string to calculate the size of.

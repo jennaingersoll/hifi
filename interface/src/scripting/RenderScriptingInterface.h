@@ -44,7 +44,7 @@ public:
     static RenderScriptingInterface* getInstance();
 
     /**jsdoc
-     * <p>The rendering method is specified by the following values:</p>
+     * The rendering method is specified by the following values:
      * <table>
      *   <thead>
      *     <tr><th>Value</th><th>Name</th><th>Description</th>
@@ -75,7 +75,7 @@ public:
 public slots:
     /**jsdoc
      * Gets the configuration for a rendering job by name.
-     * <p><strong>Warning:</strong> For internal, debugging purposes. Subject to change.</p>
+     * <p><strong>Warning:</strong> For internal, debugging purposes. Subject to change.
      * @function Render.getConfig
      * @param {string} name - The name of the rendering job.
      * @returns {object} The configuration for the rendering job.

@@ -30,19 +30,18 @@
  * @property {FilterFlags} PICK_AVATARS - Include avatars when intersecting. <em>Read-only.</em>
  * @property {FilterFlags} PICK_HUD - Include the HUD surface when intersecting in HMD mode. <em>Read-only.</em>
  *
- * @property {FilterFlags} PICK_ENTITIES - Include domain and avatar entities when intersecting. <em>Read-only.</em>
- *     <p class="important">Deprecated: This property is deprecated and will be removed. Use <code>PICK_DOMAIN_ENTITIES | 
- *     PICK_AVATAR_ENTITIES</code> instead.</p>
- * @property {FilterFlags} PICK_OVERLAYS - Include local entities when intersecting. <em>Read-only.</em>
- *     <p class="important">Deprecated: This property is deprecated and will be removed. Use <code>PICK_LOCAL_ENTITIES</code> 
- *     instead.</p>
- *
+ * @property {FilterFlags} PICK_ENTITIES - <span class="important">Deprecated: This property is deprecated and will 
+ *     be removed. Use <code>PICK_DOMAIN_ENTITIES | PICK_AVATAR_ENTITIES</code> instead.</span> <p>Include domain 
+ *     and avatar entities when intersecting. <em>Read-only.</em>
+ * @property {FilterFlags} PICK_OVERLAYS - <span class="important">Deprecated: This property is deprecated and will 
+ *     be removed. Use <code>PICK_LOCAL_ENTITIES</code> instead.</span> <p>Include local entities when intersecting. 
+ *     <em>Read-only.</em>
  * @property {FilterFlags} PICK_INCLUDE_VISIBLE - Include visible objects when intersecting. <em>Read-only.</em>
- *     <p><strong>Warning:</strong> Is currently always enabled by default but may not be in the future.</p>
+ *     <p><strong>Warning:</strong> Is currently always enabled by default but may not be in the future.
  * @property {FilterFlags} PICK_INCLUDE_INVISIBLE - Include invisible objects when intersecting. <em>Read-only.</em>
  *
  * @property {FilterFlags} PICK_INCLUDE_COLLIDABLE - Include collidable objects when intersecting. <em>Read-only.</em>
- *     <p><strong>Warning:</strong> Is currently always enabled by default but may not be in the future.</p>
+ *     <p><strong>Warning:</strong> Is currently always enabled by default but may not be in the future.
  * @property {FilterFlags} PICK_INCLUDE_NONCOLLIDABLE - Include non-collidable objects when intersecting. <em>Read-only.</em>
  *
  * @property {FilterFlags} PICK_PRECISE - Pick against exact meshes. <em>Read-only.</em>
@@ -50,15 +49,15 @@
  *
  * @property {FilterFlags} PICK_ALL_INTERSECTIONS - If set, returns all intersections instead of just the closest. 
  *     <em>Read-only.</em>
- *     <p><strong>Warning:</strong> Not yet implemented.</p>
+ *     <p><strong>Warning:</strong> Not yet implemented.
  *
  * @property {IntersectionType} INTERSECTED_NONE - Intersected nothing. <em>Read-only.</em>
  * @property {IntersectionType} INTERSECTED_ENTITY - Intersected an entity. <em>Read-only.</em>
  * @property {IntersectionType} INTERSECTED_LOCAL_ENTITY - Intersected a local entity. <em>Read-only.</em>
- * @property {IntersectionType} INTERSECTED_OVERLAY - Intersected a local entity. (3D overlays no longer exist.) 
- *     <em>Read-only.</em>
- *     <p class="important">Deprecated: This property is deprecated and will be removed. Use 
- *     <code>INTERSECTED_LOCAL_ENTITY</code> instead.</p>
+ * @property {IntersectionType} INTERSECTED_OVERLAY - <span class="important">Deprecated: This property is deprecated and 
+ *     will be removed. Use <code>INTERSECTED_LOCAL_ENTITY</code> instead.</span> <p>Intersected a local entity. 
+ *     (3D overlays no longer exist.) <em>Read-only.</em> 
+ *     
  * @property {IntersectionType} INTERSECTED_AVATAR - Intersected an avatar. <em>Read-only.</em>
  * @property {IntersectionType} INTERSECTED_HUD - Intersected the HUD surface. <em>Read-only.</em>
  *
@@ -104,7 +103,7 @@ public:
      * choose can lead to a wide range of behaviors. For example, with <code>PickType.Ray</code>, the properties could 
      * configure a mouse ray pick, an avatar head ray pick, or a joint ray pick.
      * <p><strong>Warning:</strong> Picks created using this method currently always intersect at least visible and collidable 
-     * things but this may not always be the case.</p>
+     * things but this may not always be the case.
      * @function Picks.createPick
      * @param {PickType} type - The type of picking to use.
      * @param {Picks.RayPickProperties|Picks.ParabolaPickProperties|Picks.StylusPickProperties|Picks.CollisionPickProperties} 
@@ -173,7 +172,7 @@ public:
      * Gets the most recent result from a pick. A pick continues to be updated ready to return a result, as long as it is 
      * enabled.
      * <p><strong>Note:</strong> Stylus picks only intersect with objects in their include list, set using 
-     * {@link Picks.setIncludeItems|setIncludeItems}.</p>
+     * {@link Picks.setIncludeItems|setIncludeItems}.   
      * @function Picks.getPrevPickResult
      * @param {number} id - The ID of the pick.
      * @returns {RayPickResult|ParabolaPickResult|StylusPickResult|CollisionPickResult} The most recent intersection result.
@@ -243,7 +242,7 @@ public:
     /**jsdoc
      * Sets a list of entity and avatar IDs that a pick should include during intersection, instead of intersecting with 
      * everything.
-     * <p><strong>Note:</strong> Stylus picks only intersect with items in their include list.</p>
+     * <p><strong>Note:</strong> Stylus picks only intersect with items in their include list.
      * @function Picks.setIncludeItems
      * @param {number} id - The ID of the pick.
      * @param {Uuid[]} includeItems - The list of IDs to include.

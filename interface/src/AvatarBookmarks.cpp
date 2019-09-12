@@ -187,8 +187,8 @@ void AvatarBookmarks::updateAvatarEntities(const QVariantList &avatarEntities) {
  * @property {number} avatarScale - The target scale of the avatar.
  * @property {Array<Object<"properties",Entities.EntityProperties>>} [avatarEntites] - The avatar entities included with the 
  *     bookmark.
- * @property {MyAvatar.AttachmentData[]} [attachments] - The attachments included with the bookmark.
- *     <p class="important">Deprecated: Use avatar entities instead.
+ * @property {MyAvatar.AttachmentData[]} [attachments] - <span class="important">Deprecated: Use avatar entities instead.</span>
+ *     <p>The attachments included with the bookmark.
  */
 
 void AvatarBookmarks::loadBookmark(const QString& bookmarkName) {

@@ -83,11 +83,11 @@ PickFilter getPickFilter(unsigned int filter) {
  *     means no maximum.
  * @property {Uuid} [parentID] - The ID of the parent: an avatar, an entity, or another pick.
  * @property {number} [parentJointIndex=0] - The joint of the parent to parent to, for example, an avatar joint. 
- *     A value of <code>0</code> means no joint.<br />
+ *     A value of <code>0</code> means no joint.<p>
  *     <em>Used only if <code>parentID</code> is specified.</em>
  * @property {string} [joint] - <code>"Mouse"</code> parents the pick to the mouse; <code>"Avatar"</code> parents the pick to 
  *     the user's avatar head; a joint name parents to the joint in the user's avatar; otherwise, the pick is "static", not 
- *     parented to anything.<br />
+ *     parented to anything.<p>
  *     <em>Used only if <code>parentID</code> is not specified.</em>
  * @property {Vec3} [position=Vec3.ZERO] - The offset of the ray origin from its parent if parented, otherwise the ray origin 
  *     in world coordinates.
@@ -95,7 +95,7 @@ PickFilter getPickFilter(unsigned int filter) {
  * @property {Vec3} [direction] - The offset of the ray direction from its parent's y-axis if parented, otherwise the ray
  *     direction in world coordinates.
  *     <p><strong>Default Value:</strong> <code>Vec3.UP</code> direction if <code>joint</code> is specified, otherwise
- *     <code>-Vec3.UP</code>.</p>
+ *     <code>-Vec3.UP</code>.
  * @property {Vec3} [dirOffset] - Synonym for <code>direction</code>.
  * @property {Quat} [orientation] - Alternative property for specifying <code>direction</code>. The value is applied to the 
  *     default <code>direction</code> value.
@@ -165,7 +165,7 @@ std::shared_ptr<PickQuery> PickScriptingInterface::buildRayPick(const QVariantMa
  *     start disabled. Disabled picks do not update their pick results.
  * @property {number} [filter=0] - The filter for this pick to use. Construct using {@link Picks} FilterFlags property
  *     values (e.g., <code>Picks.PICK_DOMAIN_ENTTITIES</code>) combined with <code>|</code> (bitwise OR) operators.
- *     <p><strong>Note:</strong> Stylus picks do not intersect avatars or the HUD.</p>
+ *     <p><strong>Note:</strong> Stylus picks do not intersect avatars or the HUD.
  * @property {number} [maxDistance=0.0] - The maximum distance at which this pick will intersect. A value of <code>0.0</code>
  *     means no maximum.
  * @property {Vec3} [tipOffset=0,0.095,0] - The position of the stylus tip relative to the hand position at default avatar 
@@ -212,16 +212,16 @@ std::shared_ptr<PickQuery> PickScriptingInterface::buildStylusPick(const QVarian
  * @property {boolean} [enabled=false] - <code>true</code> if this pick should start enabled, <code>false</code> if it should 
  *     start disabled. Disabled picks do not update their pick results.
  * @property {number} [filter=0] - The filter for this pick to use. Construct using {@link Picks} FilterFlags property 
- *     values (e.g., <code>Picks.PICK_DOMAIN_ENTTITIES</code>) combined with <code>|</code> (bitwise OR) operators.
+ *     values (e.g., <code>Picks.PICK_DOMAIN_ENTITIES</code>) combined with <code>|</code> (bitwise OR) operators.
  * @property {number} [maxDistance=0.0] - The maximum distance at which this pick will intersect. A value of <code>0.0</code> 
  *     means no maximum.
  * @property {Uuid} [parentID] - The ID of the parent: an avatar, an entity, or another pick.
  * @property {number} [parentJointIndex=0] - The joint of the parent to parent to, for example, an avatar joint.
- *     A value of <code>0</code> means no joint.<br />
+ *     A value of <code>0</code> means no joint.<p>
  *     <em>Used only if <code>parentID</code> is specified.</em>
  * @property {string} [joint] - <code>"Mouse"</code> parents the pick to the mouse; <code>"Avatar"</code> parents the pick to 
  *     the user's avatar head; a joint name parents to the joint in the user's avatar; otherwise, the pick is "static", not 
- *     parented to anything.
+ *     parented to anything.<p>
  *     <em>Used only if <code>parentID</code> is not specified.</em>
  * @property {Vec3} [position=Vec3.ZERO] - The offset of the parabola origin from its parent if parented, otherwise the 
  *     parabola origin in world coordinates.
@@ -229,7 +229,7 @@ std::shared_ptr<PickQuery> PickScriptingInterface::buildStylusPick(const QVarian
  * @property {Vec3} [direction] - The offset of the parabola direction from its parent's y-axis if parented, otherwise the 
  *     parabola direction in world coordinates.
  *     <p><strong>Default Value:</strong> <code>Vec3.UP</code> direction if <code>joint</code> is specified, otherwise
- *     <code>Vec3.FRONT</code>.</p>
+ *     <code>Vec3.FRONT</code>.
  * @property {Vec3} [dirOffset] - Synonym for <code>direction</code>.
  * @property {Quat} [orientation] - Alternative property for specifying <code>direction</code>. The value is applied to the 
  *     default <code>direction</code> value.
@@ -243,8 +243,8 @@ std::shared_ptr<PickQuery> PickScriptingInterface::buildStylusPick(const QVarian
  *     parent about the parent's y-axis, if available.
  * @property {boolean} [scaleWithParent=true] - <code>true</code> if the velocity and acceleration of the pick should scale
  *     with the avatar or other parent.
- * @property {boolean} [scaleWithAvatar=true] - Synonym for <code>scalewithParent</code>.
- *     <p class="important">Deprecated: This property is deprecated and will be removed.</p>
+ * @property {boolean} [scaleWithAvatar=true] - <span class="important">Deprecated: This property is deprecated and will be 
+ *     removed.</span> <p>Synonym for <code>scalewithParent</code>.
  * @property {PickType} pickType - The type of pick when getting these properties from {@link Picks.getPickProperties} or {@link Picks.getPickScriptParameters}. A parabola pick's type is {@link PickType.Parabola}.
  * @property {Vec3} baseScale - Returned from {@link Picks.getPickProperties} when the pick has a parent with varying scale (usually an avatar or an entity).
  *     Its value is the original scale of the parent at the moment the pick was created, and is used to rescale the pick, and/or the pointer which owns this pick, if any.
@@ -321,17 +321,17 @@ std::shared_ptr<PickQuery> PickScriptingInterface::buildParabolaPick(const QVari
  * @property {boolean} [enabled=false] - <code>true</code> if this pick should start enabled, <code>false</code> if it should
  *     start disabled. Disabled picks do not update their pick results.
  * @property {FilterFlags} [filter=0] - The filter for this pick to use. Construct using {@link Picks} FilterFlags property
- *     values (e.g., <code>Picks.PICK_DOMAIN_ENTTITIES</code>) combined with <code>|</code> (bitwise OR) operators.
- *     <p><strong>Note:</strong> Collision picks do not intersect the HUD.</p>
+ *     values (e.g., <code>Picks.PICK_DOMAIN_ENTITIES</code>) combined with <code>|</code> (bitwise OR) operators.
+ *     <p><strong>Note:</strong> Collision picks do not intersect the HUD.
  * @property {number} [maxDistance=0.0] - The maximum distance at which this pick will intersect. A value of <code>0.0</code>
  *     means no maximum.
  * @property {Uuid} [parentID] - The ID of the parent: an avatar, an entity, or another pick.
  * @property {number} [parentJointIndex=0] - The joint of the parent to parent to, for example, an avatar joint.
- *     A value of <code>0</code> means no joint.<br />
+ *     A value of <code>0</code> means no joint.<p>
  *     <em>Used only if <code>parentID</code> is specified.</em>
  * @property {string} [joint] - <code>"Mouse"</code> parents the pick to the mouse; <code>"Avatar"</code> parents the pick to
  *     the user's avatar head; a joint name parents to the joint in the user's avatar; otherwise, the pick is "static", not
- *     parented to anything.<br />
+ *     parented to anything.<p>
  *     <em>Used only if <code>parentID</code> is not specified.</em>
  * @property {boolean} [scaleWithParent=true] - <code>true</code> to scale the pick's dimensions and threshold according to the 
  *     scale of the parent.
@@ -344,9 +344,12 @@ std::shared_ptr<PickQuery> PickScriptingInterface::buildParabolaPick(const QVari
  *     the collision region. The depth is in world coordinates but scales with the parent if defined.
  * @property {CollisionMask} [collisionGroup=8] - The type of objects the collision region collides as. Objects whose collision
  *     masks overlap with the region's collision group are considered to be colliding with the region.
- * @property {PickType} pickType - The type of pick when getting these properties from {@link Picks.getPickProperties} or {@link Picks.getPickScriptParameters}. A collision pick's type is {@link PickType.Collision}.
- * @property {Vec3} baseScale - Returned from {@link Picks.getPickProperties} when the pick has a parent with varying scale (usually an avatar or an entity).
- *     Its value is the original scale of the parent at the moment the pick was created, and is used to rescale the pick, and/or the pointer which owns this pick, if any.
+ * @property {PickType} pickType - The type of pick when getting these properties from {@link Picks.getPickProperties} or 
+ *     {@link Picks.getPickScriptParameters}. A collision pick's type is {@link PickType.Collision}.
+ * @property {Vec3} baseScale - Returned from {@link Picks.getPickProperties} when the pick has a parent with varying scale 
+ *     (usually an avatar or an entity).
+ *     Its value is the original scale of the parent at the moment the pick was created, and is used to rescale the pick, and/or 
+ *     the pointer which owns this pick, if any.
  */
 std::shared_ptr<PickQuery> PickScriptingInterface::buildCollisionPick(const QVariantMap& propMap) {
     bool enabled = false;

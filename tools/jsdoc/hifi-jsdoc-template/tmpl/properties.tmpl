@@ -87,7 +87,7 @@
             <?js } ?>
 
             <td class="description last">
-                <?js= prop.description ?>
+                <p><?js= prop.description ?></p>
                 <?js if (props.hasDefault) {?>
                         <?js if (typeof prop.defaultvalue !== 'undefined') { ?>
                             <p><b>Default Value:</b> <?js= self.htmlsafe(prop.defaultvalue) ?> </p>

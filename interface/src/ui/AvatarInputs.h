@@ -32,14 +32,12 @@ class AvatarInputs : public QObject {
      * @hifi-client-entity
      * @hifi-avatar
      *
-     * @property {boolean} cameraEnabled - <code>true</code> if webcam face tracking is enabled, <code>false</code> if it is 
-     *     disabled.
+     * @property {boolean} cameraEnabled - <span class="important">Deprecated: This property is deprecated and will be removed. 
+     *     </span> <p><code>true</code> if webcam face tracking is enabled, <code>false</code> if it is disabled.
      *     <em>Read-only.</em>
-     *     <p class="important">Deprecated: This property is deprecated and will be removed.</p>
-     * @property {boolean} cameraMuted - <code>true</code> if webcam face tracking is muted (temporarily disabled), 
-     *     <code>false</code> it if isn't.
+     * @property {boolean} cameraMuted - <span class="important">Deprecated: This property is deprecated and will be removed.  
+     *     </span> <p><code>true</code> if webcam face tracking is muted (temporarily disabled), <code>false</code> it if isn't.
      *     <em>Read-only.</em>
-     *     <p class="important">Deprecated: This property is deprecated and will be removed.</p>
      * @property {boolean} ignoreRadiusEnabled - <code>true</code> if the privacy shield is enabled, <code>false</code> if it
      *     is disabled.
      *     <em>Read-only.</em>
@@ -152,7 +150,7 @@ signals:
 
     /**jsdoc
      * Triggered when another user leaves the privacy shield.
-     * <p><strong>Note:</strong> Currently doesn't work.</p>
+     * <p><strong>Note:</strong> Currently doesn't work.
      * @function AvatarInputs.avatarLeftIgnoreRadius
      * @param {QUuid} avatarID - The session ID of the user that exited the privacy shield.
      * @returns {Signal}
@@ -185,8 +183,8 @@ protected:
 
     /**jsdoc
      * Toggles the muting (temporary disablement) of webcam face tracking on/off.
-     * <p class="important">Deprecated: This function is deprecated and will be removed.</p>
      * @function AvatarInputs.toggleCameraMute
+     * @deprecated This function is deprecated and will be removed.</p>     
      */
     Q_INVOKABLE void toggleCameraMute();
 

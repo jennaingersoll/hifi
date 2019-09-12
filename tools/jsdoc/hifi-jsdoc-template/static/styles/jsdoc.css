@@ -96,7 +96,7 @@ h6
 
 .paramHeading, .typeDef h3.propsHeading, h3.subHeading
 {
-    font-size: .9rem;
+    font-size: 1rem;
     font-family: "Proxima Nova";
     font-weight: bold;
     border-bottom: solid 1px #ddd;
@@ -110,7 +110,8 @@ h4.name
 
 h5, .container-overview .subsection-title
 {
-    font-size: 13px;
+    font-size: 1rem;
+    font-family: 'Proxima Nova';
     font-weight: bold;
     margin-bottom: 5px;
 }
@@ -141,6 +142,14 @@ table tr:nth-child(even) {
 
 td {
     border: solid #c7cccb 1px;
+}
+
+td p:first-child {
+    margin-top: 0px;
+}
+
+td p:last-child {
+    margin-bottom: 0px;
 }
 
 article table thead tr th, article table tbody tr td, article table tbody tr td p {
@@ -538,7 +547,7 @@ header {
 
 .prettyprint code
 {
-    font-size: 0.9em;
+    font-size: .95em;
     line-height: 18px;
     display: block;
     padding: 4px 12px;
@@ -596,10 +605,10 @@ header {
    font-size: 100%;
 }
 
-.params td.description > p:first-child, .props td.description > p:first-child {
-   margin-top: 0;
-   padding-top: 0;
-}
+                                                                               
+                 
+                  
+ 
 
 span.param-type, .params td .param-type, .param-type dd {
   color: #606;

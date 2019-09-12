@@ -315,7 +315,7 @@ public slots:
      * {@link Window.processingGifStarted|processingGifStarted} and {@link Window.processingGifCompleted|processingGifCompleted}
      * are emitted.
      * <p>Snapshots are saved to the path specified in Settings &gt; General &gt; Snapshots, which can be accessed via the 
-     * {@link Snapshot} API.</p>
+     * {@link Snapshot} API.
      *
      * @function Window.takeSnapshot
      * @param {boolean} [notify=true] - This value is passed on through the {@link Window.stillSnapshotTaken|stillSnapshotTaken}
@@ -326,7 +326,7 @@ public slots:
      *     full resolution is used (window dimensions in desktop mode; HMD display dimensions in HMD mode), otherwise one of the
      *     dimensions is adjusted in order to match the aspect ratio.
      * @param {string} [filename=""] - If a filename is not provided, the image is saved as "hifi-snap-by-&lt;user 
-     *     name&gt-on-YYYY-MM-DD_HH-MM-SS".<br />
+     *     name&gt-on-YYYY-MM-DD_HH-MM-SS".<p>
      *     Still images are saved in JPEG or PNG format according to the extension provided &mdash; <code>".jpg"</code>, 
      *     <code>".jpeg"</code>, or <code>".png"</code> &mdash; or if not provided then in JPEG format with an extension of 
      *     <code>".jpg"</code>. Animated images are saved in GIF format.
@@ -360,12 +360,12 @@ public slots:
     /**jsdoc
      * Takes a still snapshot of the current view from the secondary camera that can be set up through the {@link Render} API.
      * <p>Snapshots are saved to the path specified in Settings &gt; General &gt; Snapshots, which can be accessed via the
-     * {@link Snapshot} API.</p>
+     * {@link Snapshot} API.
      * @function Window.takeSecondaryCameraSnapshot
      * @param {boolean} [notify=true] - This value is passed on through the {@link Window.stillSnapshotTaken|stillSnapshotTaken}
      *     signal.
      * @param {string} [filename=""] - If a filename is not provided, the image is saved as "hifi-snap-by-&lt;user
-     *     name&gt-on-YYYY-MM-DD_HH-MM-SS".<br />
+     *     name&gt-on-YYYY-MM-DD_HH-MM-SS".<p>
      *     Images are saved in JPEG or PNG format according to the extension provided &mdash; <code>".jpg"</code>,
      *     <code>".jpeg"</code>, or <code>".png"</code> &mdash; or if not provided then in JPEG format with an extension of
      *     <code>".jpg"</code>.
@@ -376,7 +376,7 @@ public slots:
      * Takes a 360&deg; snapshot at a given position for the secondary camera. The secondary camera does not need to have been 
      *     set up.
      * <p>Snapshots are saved to the path specified in Settings &gt; General &gt; Snapshots, which can be accessed via the
-     * {@link Snapshot} API.</p>
+     * {@link Snapshot} API.
      * @function Window.takeSecondaryCamera360Snapshot
      * @param {Vec3} cameraPosition - The position of the camera for the snapshot.
      * @param {boolean} [cubemapOutputFormat=false] - If <code>true</code> then the snapshot is saved as a cube map image, 
@@ -384,7 +384,7 @@ public slots:
      * @param {boolean} [notify=true] - This value is passed on through the {@link Window.stillSnapshotTaken|stillSnapshotTaken}
      *     signal.
      * @param {string} [filename=""] - If a filename is not provided, the image is saved as "hifi-snap-by-&lt;user
-     *     name&gt-on-YYYY-MM-DD_HH-MM-SS".<br />
+     *     name&gt-on-YYYY-MM-DD_HH-MM-SS".<p>
      *     Images are saved in JPEG or PNG format according to the extension provided &mdash; <code>".jpg"</code>,
      *     <code>".jpeg"</code>, or <code>".png"</code> &mdash; or if not provided then in JPEG format with an extension of
      *     <code>".jpg"</code>.
@@ -515,7 +515,7 @@ public slots:
 
     /**jsdoc
      * Opens a URL in the Interface window or other application, depending on the URL's scheme. The following schemes are 
-     * supported:<br />
+     * supported:
      * <ul>
      *   <li><code>hifi</code>: Navigate to the URL in Interface.</li>
      *   <li><code>hifiapp</code>: Open a system app in Interface.</li>
@@ -623,8 +623,8 @@ private slots:
 signals:
 
     /**jsdoc
-     * Triggered when you change the domain you're visiting. <strong>Warning:</strong> Is not emitted if you go to a domain 
-     * that isn't running.
+     * Triggered when you change the domain you're visiting. <p><strong>Warning:</strong> Is not emitted if you go 
+     * to a domain that isn't running.
      * @function Window.domainChanged
      * @param {string} domainURL - The domain's URL.
      * @returns {Signal}

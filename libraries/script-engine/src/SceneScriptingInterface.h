@@ -114,11 +114,11 @@ namespace SceneScripting {
     using KeyLightPointer = std::unique_ptr<KeyLight>;
     
     /**jsdoc
+     * <p class="important">Deprecated: This class is deprecated and will be removed.</p>
      * The <code>Stage</code> class is no longer used.
      *
      * <p>Provided as a property in the {@link Scene} API.</p>
      *
-     * <p class="important">Deprecated: This class is deprecated and will be removed.</p>
      *
      * @class Stage
      *
@@ -126,16 +126,16 @@ namespace SceneScripting {
      * @hifi-client-entity
      * @hifi-avatar
      *
-     * @property {string} backgroundMode - Background mode.
-     *     <p class="important">Deprecated: This property is deprecated and will be removed.</p>
-     * @property {Stage.KeyLight} keyLight - Key light.
-     *     <p class="important">Deprecated: This property is deprecated and will be removed.</p>
-     * @property {Stage.Location} location - Location.
-     *     <p class="important">Deprecated: This property is deprecated and will be removed.</p>
-     * @property {boolean} sunModel - Sun model.
-     *     <p class="important">Deprecated: This property is deprecated and will be removed.</p>
-     * @property {Stage.Time} time - Time.
-     *     <p class="important">Deprecated: This property is deprecated and will be removed.</p>
+     * @property {string} backgroundMode - <span class="important">Deprecated: This property is deprecated and will be removed.<span> 
+     *     <p>Background mode.
+     * @property {Stage.KeyLight} keyLight - <span class="important">Deprecated: This property is deprecated and will be removed.</span> 
+     *     <p>Key light.
+     * @property {Stage.Location} location - <span class="important">Deprecated: This property is deprecated and will be removed.</span> 
+     *     <p>Location.
+     * @property {boolean} sunModel - <span class="important">Deprecated: This property is deprecated and will be removed.</span> 
+     *     <p>Sun model.
+     * @property {Stage.Time} time - <span class="important">Deprecated: This property is deprecated and will be removed.</span> 
+     *     <p>Time.
      */
     class Stage : public QObject {
         Q_OBJECT
@@ -202,9 +202,8 @@ namespace SceneScripting {
  * @property {boolean} shouldRenderAvatars - <code>true</code> if avatars are rendered, <code>false</code> if they aren't.
  * @property {boolean} shouldRenderEntities - <code>true</code> if entities (domain, avatar, and local) are rendered, 
  *     <code>false</code> if they aren't.
- * @property {Stage} stage - Stage. <em>Read-only.</em>
- *     <p class="important">Deprecated: This property is deprecated and will be removed. Use {@link Entities| Zone entities} 
- *     for lighting instead.</p>
+ * @property {Stage} stage - <span class="important">Deprecated: This property is deprecated and will be removed. Use  
+ *     {@link Entities| Zone entities} for lighting instead.</span> <p>Stage. <em>Read-only.</em>
  */
 class SceneScriptingInterface : public QObject, public Dependency {
     Q_OBJECT

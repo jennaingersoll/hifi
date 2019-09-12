@@ -205,7 +205,7 @@ public:
     /**jsdoc
      * Gets the default rotation of a joint (in the current avatar) relative to its parent.
      * <p>For information on the joint hierarchy used, see
-     * <a href="https://docs.highfidelity.com/create/avatars/avatar-standards">Avatar Standards</a>.</p>
+     * <a href="https://docs.highfidelity.com/create/avatars/avatar-standards">Avatar Standards</a>.
      * @function MyAvatar.getDefaultJointRotation
      * @param {number} index - The joint index.
      * @returns {Quat} The default rotation of the joint if the joint index is valid, otherwise {@link Quat(0)|Quat.IDENTITY}.
@@ -216,7 +216,7 @@ public:
      * Gets the default translation of a joint (in the current avatar) relative to its parent, in model coordinates.
      * <p><strong>Warning:</strong> These coordinates are not necessarily in meters.</p>
      * <p>For information on the joint hierarchy used, see
-     * <a href="https://docs.highfidelity.com/create/avatars/avatar-standards">Avatar Standards</a>.</p>
+     * <a href="https://docs.highfidelity.com/create/avatars/avatar-standards">Avatar Standards</a>.
      * @function MyAvatar.getDefaultJointTranslation
      * @param {number} index - The joint index.
      * @returns {Vec3} The default translation of the joint (in model coordinates) if the joint index is valid, otherwise 
@@ -259,7 +259,7 @@ public:
 
     /**jsdoc
      * Sets the rotation of a joint relative to the avatar.
-     * <p><strong>Warning:</strong> Not able to be used in the <code>MyAvatar</code> API.</p>
+     * <p><strong>Warning:</strong> Not able to be used in the <code>MyAvatar</code> API.
      * @function MyAvatar.setAbsoluteJointRotationInObjectFrame
      * @param {number} index - The index of the joint. <em>Not used.</em>
      * @param {Quat} rotation - The rotation of the joint relative to the avatar. <em>Not used.</em>
@@ -269,7 +269,7 @@ public:
 
     /**jsdoc
      * Sets the translation of a joint relative to the avatar.
-     * <p><strong>Warning:</strong> Not able to be used in the <code>MyAvatar</code> API.</p>
+     * <p><strong>Warning:</strong> Not able to be used in the <code>MyAvatar</code> API.
      * @function MyAvatar.setAbsoluteJointTranslationInObjectFrame
      * @param {number} index - The index of the joint. <em>Not used.</em>
      * @param {Vec3} translation - The translation of the joint relative to the avatar. <em>Not used.</em>
@@ -468,7 +468,7 @@ public:
     /**jsdoc
      * Sets the joint of the entity or avatar that the avatar is parented to. 
      * @function MyAvatar.setParentJointIndex
-     * @param {number} parentJointIndex - he joint of the entity or avatar that the avatar should be parented to. Use
+     * @param {number} parentJointIndex - The joint of the entity or avatar that the avatar should be parented to. Use
      *     <code>65535</code> or <code>-1</code> to parent to the entity or avatar's position and orientation rather than a 
      *     joint.
      */

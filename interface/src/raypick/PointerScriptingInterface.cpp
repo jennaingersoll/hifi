@@ -150,21 +150,21 @@ std::shared_ptr<Pointer> PointerScriptingInterface::buildStylus(const QVariant& 
  * @typedef {object} Pointers.RayPointerRenderState
  * @property {string} name - When creating using {@link Pointers.createPointer}, the name of the render state.
  * @property {Overlays.OverlayProperties|Uuid} [start]
- *     <p>When creating or editing using {@link Pointers.createPointer} or {@link Pointers.editRenderState}, the properties of 
- *     an overlay to render at the start of the ray pointer. The <code>type</code> property must be specified.</p>
+ *     When creating or editing using {@link Pointers.createPointer} or {@link Pointers.editRenderState}, the properties of 
+ *     an overlay to render at the start of the ray pointer. The <code>type</code> property must be specified.
  *     <p>When getting using {@link Pointers.getPointerProperties}, the ID of the overlay rendered at the start of the ray;
  *     <code>null</code> if there is no overlay.
  *
  * @property {Overlays.OverlayProperties|Uuid} [path]
- *     <p>When creating or editing using {@link Pointers.createPointer} or {@link Pointers.editRenderState}, the properties of
+ *     When creating or editing using {@link Pointers.createPointer} or {@link Pointers.editRenderState}, the properties of
  *     the overlay rendered for the path of the ray pointer. The <code>type</code> property must be specified and be 
- *     <code>"line3d"</code>.</p>
+ *     <code>"line3d"</code>.
  *     <p>When getting using {@link Pointers.getPointerProperties}, the ID of the overlay rendered for the path of the ray;
  *     <code>null</code> if there is no overlay.
  *
  * @property {Overlays.OverlayProperties|Uuid} [end]
- *     <p>When creating or editing using {@link Pointers.createPointer} or {@link Pointers.editRenderState}, the properties of
- *     an overlay to render at the end of the ray pointer. The <code>type</code> property must be specified.</p>
+ *     When creating or editing using {@link Pointers.createPointer} or {@link Pointers.editRenderState}, the properties of
+ *     an overlay to render at the end of the ray pointer. The <code>type</code> property must be specified.
  *     <p>When getting using {@link Pointers.getPointerProperties}, the ID of the overlay rendered at the end of the ray; 
  *     <code>null</code> if there is no overlay.
  */
@@ -182,28 +182,28 @@ std::shared_ptr<Pointer> PointerScriptingInterface::buildStylus(const QVariant& 
  *     scale linearly with distance; <code>false</code> if they aren't. 
  * @property {boolean} [scaleWithParent=false] - <code>true</code> if the width of the ray's path and the size of the 
  *     start and end overlays scale linearly with the pointer parent's scale; <code>false</code> if they don't scale.
- * @property {boolean} [scaleWithAvatar=false] - A synonym for <code>scalewithParent</code>.
- *     <p class="important">Deprecated: This property is deprecated and will be removed.</p>
+ * @property {boolean} [scaleWithAvatar=false] - <span class="important">Deprecated: This property is deprecated and will be removed.</span> 
+ *     <p>A synonym for <code>scalewithParent</code>.
  * @property {boolean} [followNormal=false] - <code>true</code> if the overlay rendered at the end of the ray rotates to 
  *     follow the normal of the surface if one is intersected; <code>false</code> if it doesn't.
  * @property {number} [followNormalStrength=0.0] - How quickly the overlay rendered at the end of the ray rotates to follow 
  *     the normal of an intersected surface. If <code>0</code> or <code>1</code>, the overlay rotation follows instantaneously; 
- *    for other values, the larger the value the more quickly the rotation follows.
+ *     for other values, the larger the value the more quickly the rotation follows.
  * @property {Pointers.RayPointerRenderState[]|Object.<string, Pointers.RayPointerRenderState>} [renderStates]
- *     <p>A set of visual states that can be switched among using {@link Pointers.setRenderState}. These define the visual 
- *     appearance of the pointer when it is intersecting something.</p>
+ *     A set of visual states that can be switched among using {@link Pointers.setRenderState}. These define the visual 
+ *     appearance of the pointer when it is intersecting something.
  *     <p>When setting using {@link Pointers.createPointer}, an array of 
  *     {@link Pointers.RayPointerRenderState|RayPointerRenderState} values.</p>
  *     <p>When getting using {@link Pointers.getPointerProperties}, an object mapping render state names to 
- *     {@link Pointers.RayPointerRenderState|RayPointerRenderState} values.</p>
+ *     {@link Pointers.RayPointerRenderState|RayPointerRenderState} values.
  * @property {Pointers.DefaultRayPointerRenderState[]|Object.<string, Pointers.DefaultRayPointerRenderState>} 
  *     [defaultRenderStates]
- *     <p>A set of visual states that can be switched among using {@link Pointers.setRenderState}. These define the visual
- *     appearance of the pointer when it is not intersecting something.</p>
+ *     A set of visual states that can be switched among using {@link Pointers.setRenderState}. These define the visual
+ *     appearance of the pointer when it is not intersecting something.
  *     <p>When setting using {@link Pointers.createPointer}, an array of 
  *     {@link Pointers.DefaultRayPointerRenderState|DefaultRayPointerRenderState} values.</p>
  *     <p>When getting using {@link Pointers.getPointerProperties}, an object mapping render state names to 
- *     {@link Pointers.DefaultRayPointerRenderState|DefaultRayPointerRenderState} values.</p>
+ *     {@link Pointers.DefaultRayPointerRenderState|DefaultRayPointerRenderState} values.
  * @property {boolean} [hover=false] - <code>true</code> if the pointer generates {@link Entities} hover events, 
  *     <code>false</code> if it doesn't.
  * @property {Pointers.Trigger[]} [triggers=[]] - A list of ways that a {@link Controller} action or function should trigger 
@@ -347,16 +347,16 @@ std::shared_ptr<Pointer> PointerScriptingInterface::buildLaserPointer(const QVar
  * @typedef {object} Pointers.ParabolaPointerRenderState
  * @property {string} name - When creating using {@link Pointers.createPointer}, the name of the render state.
  * @property {Overlays.OverlayProperties|Uuid} [start]
- *     <p>When creating or editing using {@link Pointers.createPointer} or {@link Pointers.editRenderState}, the properties of
- *     an overlay to render at the start of the parabola pointer. The <code>type</code> property must be specified.</p>
+ *     When creating or editing using {@link Pointers.createPointer} or {@link Pointers.editRenderState}, the properties of
+ *     an overlay to render at the start of the parabola pointer. The <code>type</code> property must be specified.
  *     <p>When getting using {@link Pointers.getPointerProperties}, the ID of the overlay rendered at the start of the 
  *     parabola; <code>null</code> if there is no overlay.
  * @property {Pointers.ParabolaPointerPath|Uuid} [path]
- *     <p>When creating or editing using {@link Pointers.createPointer} or {@link Pointers.editRenderState}, the properties of
+ *     When creating or editing using {@link Pointers.createPointer} or {@link Pointers.editRenderState}, the properties of
  *     the rendered path of the parabola pointer.</p>
  *     <p>This property is not provided when getting using {@link Pointers.getPointerProperties}.
  * @property {Overlays.OverlayProperties|Uuid} [end]
- *     <p>When creating or editing using {@link Pointers.createPointer} or {@link Pointers.editRenderState}, the properties of
+ *     When creating or editing using {@link Pointers.createPointer} or {@link Pointers.editRenderState}, the properties of
  *     an overlay to render at the end of the ray pointer. The <code>type</code> property must be specified.</p>
  *     <p>When getting using {@link Pointers.getPointerProperties}, the ID of the overlay rendered at the end of the parabola;
  *     <code>null</code> if there is no overlay.
@@ -375,28 +375,28 @@ std::shared_ptr<Pointer> PointerScriptingInterface::buildLaserPointer(const QVar
  *     scale linearly with distance; <code>false</code> if they aren't.
  * @property {boolean} [scaleWithParent=false] - <code>true</code> if the width of the ray's path and the size of the
  *     start and end overlays scale linearly with the pointer parent's scale; <code>false</code> if they don't scale.
- * @property {boolean} [scaleWithAvatar=false] - A synonym for <code>scalewithParent</code>.
- *     <p class="important">Deprecated: This property is deprecated and will be removed.</p>
+ * @property {boolean} [scaleWithAvatar=false] - <span class="important">Deprecated: This property is deprecated and will be 
+ *     removed.</span> <p>A synonym for <code>scalewithParent</code>.
  * @property {boolean} [followNormal=false] - <code>true</code> if the overlay rendered at the end of the ray rotates to
  *     follow the normal of the surface if one is intersected; <code>false</code> if it doesn't.
  * @property {number} [followNormalStrength=0.0] - How quickly the overlay rendered at the end of the ray rotates to follow
  *     the normal of an intersected surface. If <code>0</code> or <code>1</code>, the overlay rotation follows instantaneously;
  *    for other values, the larger the value the more quickly the rotation follows.
  * @property {Pointers.ParabolaPointerRenderState[]|Object.<string, Pointers.ParabolaPointerRenderState>} [renderStates] 
- *     <p>A set of visual states that can be switched among using {@link Pointers.setRenderState}. These define the visual
- *     appearance of the pointer when it is intersecting something.</p>
+ *     A set of visual states that can be switched among using {@link Pointers.setRenderState}. These define the visual
+ *     appearance of the pointer when it is intersecting something.
  *     <p>When setting using {@link Pointers.createPointer}, an array of
  *     {@link Pointers.ParabolaPointerRenderState|ParabolaPointerRenderState} values.</p>
  *     <p>When getting using {@link Pointers.getPointerProperties}, an object mapping render state names to
- *     {@link Pointers.ParabolaPointerRenderState|ParabolaPointerRenderState} values.</p>
+ *     {@link Pointers.ParabolaPointerRenderState|ParabolaPointerRenderState} values.
  * @property {Pointers.DefaultParabolaPointerRenderState[]|Object.<string, Pointers.DefaultParabolaPointerRenderState>} 
  *     [defaultRenderStates] 
- *     <p>A set of visual states that can be switched among using {@link Pointers.setRenderState}. These define the visual
- *     appearance of the pointer when it is not intersecting something.</p>
+ *     A set of visual states that can be switched among using {@link Pointers.setRenderState}. These define the visual
+ *     appearance of the pointer when it is not intersecting something.
  *     <p>When setting using {@link Pointers.createPointer}, an array of
  *     {@link Pointers.DefaultParabolaPointerRenderState|DefaultParabolaPointerRenderState} values.</p>
  *     <p>When getting using {@link Pointers.getPointerProperties}, an object mapping render state names to
- *     {@link Pointers.DefaultParabolaPointerRenderState|DefaultParabolaPointerRenderState} values.</p>
+ *     {@link Pointers.DefaultParabolaPointerRenderState|DefaultParabolaPointerRenderState} values.
  * @property {boolean} [hover=false] - <code>true</code> if the pointer generates {@link Entities} hover events,
  *     <code>false</code> if it doesn't.
  * @property {Pointers.Trigger[]} [triggers=[]] - A list of ways that a {@link Controller} action or function should trigger

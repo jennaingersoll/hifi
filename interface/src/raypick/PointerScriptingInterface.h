@@ -41,7 +41,7 @@ public:
      * @property {Controller.Standard|Controller.Actions|function} action - The controller output or function that triggers the 
      *     events on the entity or overlay. If a function, it must return a number <code>&gt;= 1.0</code> to start the action 
      *     and <code>&lt; 1.0</code> to terminate the action.
-     * @property {string} button - Which button to trigger.
+     * @property {string} button - Which button to trigger:
      *    <ul>
      *      <li><code>"Primary"</code>, <code>"Secondary"</code>, and <code>"Tertiary"</code> cause {@link Entities} and 
      *      {@link Overlays} mouse pointer events. Other button names also cause mouse events but the <code>button</code> 
@@ -55,7 +55,7 @@ public:
      * properties specified. For example, a ray pointer may be a static ray pointer, a mouse ray pointer, or joint ray 
      * pointer.
      * <p><strong>Warning:</strong> Pointers created using this method currently always intersect at least visible and 
-     * collidable things but this may not always be the case.</p>
+     * collidable things but this may not always be the case.
      * @function Pointers.createPointer
      * @param {PickType} type - The type of pointer to create. Cannot be {@link PickType|PickType.Collision}.
      * @param {Pointers.RayPointerProperties|Pointers.ParabolaPointerProperties|Pointers.StylusPointerProperties} properties - 
@@ -185,7 +185,7 @@ public:
      * <p><strong>Note:</strong> You can only edit the properties of the existing parts of the pointer; you cannot change the 
      * type of any part.</p>
      * <p><strong>Note:</strong> You cannot use this method to change the appearance of a default render state.</p>
-     * <p><strong>Note:</strong> Not able to be used with stylus pointers.</p>
+     * <p><strong>Note:</strong> Not able to be used with stylus pointers.
      * @function Pointers.editRenderState
      * @param {number} id - The ID of the pointer.
      * @param {string} renderState - The name of the render state to edit.
@@ -350,7 +350,7 @@ public:
 
     /**jsdoc
      * Sets the length of a pointer.
-     * <p><strong>Note:</strong> Not used by stylus pointers.</p>
+     * <p><strong>Note:</strong> Not used by stylus pointers.
      * @function Pointers.setLength
      * @param {number} id - The ID of the pointer.
      * @param {number} length - The desired length of the pointer.
@@ -359,7 +359,7 @@ public:
 
     /**jsdoc
      * Sets a list of entity and avatar IDs that a pointer should ignore during intersection.
-     * <p><strong>Note:</strong> Not used by stylus pointers.</p>
+     * <p><strong>Note:</strong> Not used by stylus pointers.
      * @function Pointers.setIgnoreItems
      * @param {number} id - The ID of the pointer.
      * @param {Uuid[]} ignoreItems - A list of IDs to ignore.
@@ -379,7 +379,7 @@ public:
 
     /**jsdoc
      * Locks a pointer onto a specific entity or avatar.
-     * <p><strong>Note:</strong> Not used by stylus pointers.</p>
+     * <p><strong>Note:</strong> Not used by stylus pointers.
      * @function Pointers.setLockEndUUID
      * @param {number} id - The ID of the pointer.
      * @param {Uuid} targetID - The ID of the entity or avatar to lock the pointer on to.

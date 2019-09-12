@@ -17,7 +17,7 @@
 #include "NumericalConstants.h" // for MILLIMETERS_PER_METER
 
 /**jsdoc
- * <p>Defines the shape used for collisions or zones.</p>
+ * Defines the shape used for collisions or zones.
  * <table>
  *   <thead>
  *     <tr><th>Value</th><th>Description</th></tr>

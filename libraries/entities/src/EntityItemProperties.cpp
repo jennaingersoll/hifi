@@ -982,8 +982,8 @@ EntityPropertyFlags EntityItemProperties::getChangedProperties() const {
  * @property {string} modelURL="" - The URL of the glTF, FBX, or OBJ model. glTF models may be in JSON or binary format 
  *     (".gltf" or ".glb" URLs respectively). Baked models' URLs have ".baked" before the file type. Model files may also be 
  *     compressed in GZ format, in which case the URL ends in ".gz".
- * @property {Vec3} modelScale - The scale factor applied to the model's dimensions.
- *     <p class="important">Deprecated: This property is deprecated and will be removed.</p>
+ * @property {Vec3} modelScale - <span class="important">Deprecated: This property is deprecated and will be removed.</span> 
+ *     <p>The scale factor applied to the model's dimensions.
  * @property {string} textures="" - A JSON string of texture name, URL pairs used when rendering the model in place of the
  *     model's original textures. Use a texture name from the <code>originalTextures</code> property to override that texture. 
  *     Only the texture names and URLs to be overridden need be specified; original textures are used where there are no 
@@ -1118,8 +1118,8 @@ EntityPropertyFlags EntityItemProperties::getChangedProperties() const {
  * @property {number} alphaSpread=0 - The spread in alpha that each particle is given. For example, if 
  *     <code>alpha == 0.5</code> and <code>alphaSpread == 0.25</code>, each particle will have an alpha in the range 
  *     <code>0.25</code> &ndash; <code>0.75</code>.
- * @property {Entities.Pulse} pulse - Color and alpha pulse.
- *     <p class="important">Deprecated: This property is deprecated and will be removed.</p>
+ * @property {Entities.Pulse} pulse - <span class="important">Deprecated: This property is deprecated and will be removed.</span>
+ *     <p>Color and alpha pulse.
  * @property {number} particleSpin=0 - The rotation of each particle at the middle of its life, range <code>-2 * Math.PI</code> 
  *     &ndash; <code>2 * Math.PI</code> radians.
  * @property {number} spinStart=null - The rotation of each particle at the start of its life, range <code>-2 * Math.PI</code> 
@@ -1217,7 +1217,7 @@ EntityPropertyFlags EntityItemProperties::getChangedProperties() const {
  *     <code>dimensions / voxelVolumesize</code>.
  * @property {string} voxelData="ABAAEAAQAAAAHgAAEAB42u3BAQ0AAADCoPdPbQ8HFAAAAPBuEAAAAQ==" - Base-64 encoded compressed dump of 
  *     the PolyVox data. This property is typically not used in scripts directly; rather, functions that manipulate a PolyVox 
- *     entity update it.<br />
+ *     entity update it.<p>
  *     The size of this property increases with the size and complexity of the PolyVox entity, with the size depending on how 
  *     the particular entity's voxels compress. Because this property value has to fit within a High Fidelity datagram packet, 
  *     there is a limit to the size and complexity of a PolyVox entity; edits which would result in an overflow are rejected.
@@ -1265,8 +1265,8 @@ EntityPropertyFlags EntityItemProperties::getChangedProperties() const {
  * @property {Vec3} dimensions=0.1,0.1,0.1 - The dimensions of the entity.
  * @property {Color} color=255,255,255 - The color of the entity.
  * @property {number} alpha=1 - The opacity of the entity, range <code>0.0</code> &ndash; <code>1.0</code>.
- * @property {Entities.Pulse} pulse - Color and alpha pulse.
- *     <p class="important">Deprecated: This property is deprecated and will be removed.</p>
+ * @property {Entities.Pulse} pulse - <span class="important">Deprecated: This property is deprecated and will be removed.</span> 
+ *     <p>Color and alpha pulse.
  * @example <caption>Create a cylinder.</caption>
  * var shape = Entities.addEntity({
  *     type: "Shape",
@@ -1301,8 +1301,8 @@ EntityPropertyFlags EntityItemProperties::getChangedProperties() const {
  * @property {number} textAlpha=1.0 - The opacity of the text.
  * @property {Color} backgroundColor=0,0,0 - The color of the background rectangle.
  * @property {number} backgroundAlpha=1.0 - The opacity of the background.
- * @property {Entities.Pulse} pulse - Color and alpha pulse.
- *     <p class="important">Deprecated: This property is deprecated and will be removed.</p>
+ * @property {Entities.Pulse} pulse - <span class="important">Deprecated: This property is deprecated and will be removed.</span> 
+ *     <p>Color and alpha pulse.
  * @property {number} leftMargin=0.0 - The left margin, in meters.
  * @property {number} rightMargin=0.0 - The right margin, in meters.
  * @property {number} topMargin=0.0 - The top margin, in meters.
@@ -1315,13 +1315,13 @@ EntityPropertyFlags EntityItemProperties::getChangedProperties() const {
  * @property {Color} textEffectColor=255,255,255 - The color of the effect.
  * @property {number} textEffectThickness=0.2 - The magnitude of the text effect, range <code>0.0</code> &ndash; <code>0.5</code>.
  * @property {BillboardMode} billboardMode="none" - Whether the entity is billboarded to face the camera.
- * @property {boolean} faceCamera - <code>true</code> if <code>billboardMode</code> is <code>"yaw"</code>, <code>false</code> 
- *     if it isn't. Setting this property to <code>false</code> sets the <code>billboardMode</code> to <code>"none"</code>.
- *     <p class="important">Deprecated: This property is deprecated and will be removed.</p>
- * @property {boolean} isFacingAvatar - <code>true</code> if <code>billboardMode</code> is <code>"full"</code>, 
- *     <code>false</code> if it isn't. Setting this property to <code>false</code> sets the <code>billboardMode</code> to
- *     <code>"none"</code>.
- *     <p class="important">Deprecated: This property is deprecated and will be removed.</p>
+ * @property {boolean} faceCamera - <span class="important">Deprecated: This property is deprecated and will be removed.</span> 
+ *     <p><code>true</code> if <code>billboardMode</code> is <code>"yaw"</code>, <code>false</code> if it isn't. Setting this 
+ *     property to <code>false</code> sets the <code>billboardMode</code> to <code>"none"</code>.
+ * @property {boolean} isFacingAvatar - <span class="important">Deprecated: This property is deprecated and will be removed.</span> 
+ *     <p><code>true</code> if <code>billboardMode</code> is <code>"full"</code>, <code>false</code> if it isn't. Setting this 
+ *     property to <code>false</code> sets the <code>billboardMode</code> to <code>"none"</code>.
+ *     
  * @example <caption>Create a text entity.</caption>
  * var text = Entities.addEntity({
  *     type: "Text",
@@ -1348,16 +1348,16 @@ EntityPropertyFlags EntityItemProperties::getChangedProperties() const {
  *     colors on the web page are multiplied by the property color. For example, a value of 
  *     <code>{ red: 255, green: 0, blue: 0 }</code> lets only the red channel of pixels' colors through.
  * @property {number} alpha=1 - The opacity of the web surface.
- * @property {Entities.Pulse} pulse - Color and alpha pulse.
- *     <p class="important">Deprecated: This property is deprecated and will be removed.</p>
+ * @property {Entities.Pulse} pulse - <span class="important">Deprecated: This property is deprecated and will be removed.</span> 
+ *     <p>Color and alpha pulse.
  * @property {BillboardMode} billboardMode="none" - Whether the entity is billboarded to face the camera.
- * @property {boolean} faceCamera - <code>true</code> if <code>billboardMode</code> is <code>"yaw"</code>, <code>false</code> 
- *     if it isn't. Setting this property to <code>false</code> sets the <code>billboardMode</code> to <code>"none"</code>.
- *     <p class="important">Deprecated: This property is deprecated and will be removed.</p>
- * @property {boolean} isFacingAvatar - <code>true</code> if <code>billboardMode</code> is <code>"full"</code>, 
- *     <code>false</code> if it isn't. Setting this property to <code>false</code> sets the <code>billboardMode</code> to
- *     <code>"none"</code>.
- *     <p class="important">Deprecated: This property is deprecated and will be removed.</p>
+ * @property {boolean} faceCamera - <span class="important">Deprecated: This property is deprecated and will be removed.</span> 
+ *     <p><code>true</code> if <code>billboardMode</code> is <code>"yaw"</code>, <code>false</code> if it isn't. Setting this 
+ *     property to <code>false</code> sets the <code>billboardMode</code> to <code>"none"</code>.
+ * @property {boolean} isFacingAvatar - <span class="important">Deprecated: This property is deprecated and will be removed.</span>  
+ *     <p><code>true</code> if <code>billboardMode</code> is <code>"full"</code>, <code>false</code> if it isn't. Setting this property 
+ *     to <code>false</code> sets the <code>billboardMode</code> to <code>"none"</code>.
+ *     
  * @property {number} dpi=30 - The resolution to display the page at, in dots per inch. If you convert this to dots per meter 
  *     (multiply by 1 / 0.0254 = 39.3701) then multiply <code>dimensions.x</code> and <code>dimensions.y</code> by that value 
  *     you get the resolution in pixels.
@@ -1462,16 +1462,15 @@ EntityPropertyFlags EntityItemProperties::getChangedProperties() const {
  *     to the full image in that dimension.
  * @property {Color} color=255,255,255 - The color of the image.
  * @property {number} alpha=1 - The opacity of the image.
- * @property {Entities.Pulse} pulse - Color and alpha pulse.
- *     <p class="important">Deprecated: This property is deprecated and will be removed.</p>
+ * @property {Entities.Pulse} pulse - <span class="important">Deprecated: This property is deprecated and will be removed.</span> 
+ *     <p>Color and alpha pulse.
  * @property {BillboardMode} billboardMode="none" - Whether the entity is billboarded to face the camera.
- * @property {boolean} faceCamera - <code>true</code> if <code>billboardMode</code> is <code>"yaw"</code>, <code>false</code> 
- *     if it isn't. Setting this property to <code>false</code> sets the <code>billboardMode</code> to <code>"none"</code>.
- *     <p class="important">Deprecated: This property is deprecated and will be removed.</p>
- * @property {boolean} isFacingAvatar - <code>true</code> if <code>billboardMode</code> is <code>"full"</code>, 
- *     <code>false</code> if it isn't. Setting this property to <code>false</code> sets the <code>billboardMode</code> to
- *     <code>"none"</code>.
- *     <p class="important">Deprecated: This property is deprecated and will be removed.</p>
+ * @property {boolean} faceCamera - <span class="important">Deprecated: This property is deprecated and will be removed.</span> 
+ *     <p><code>true</code> if <code>billboardMode</code> is <code>"yaw"</code>, <code>false</code> if it isn't. Setting this 
+ *     property to <code>false</code> sets the <code>billboardMode</code> to <code>"none"</code>.
+ * @property {boolean} isFacingAvatar - <span class="important">Deprecated: This property is deprecated and will be removed.</span>
+ *     <p><code>true</code> if <code>billboardMode</code> is <code>"full"</code>, <code>false</code> if it isn't. Setting this 
+ *     property to <code>false</code> sets the <code>billboardMode</code> to <code>"none"</code>.
  * @example <caption>Create an image entity.</caption>
  * var image = Entities.addEntity({
  *     type: "Image",
@@ -1491,8 +1490,8 @@ EntityPropertyFlags EntityItemProperties::getChangedProperties() const {
  * @property {Vec3} dimensions - 0.1,0.1,0.01 - The dimensions of the entity.
  * @property {Color} color=255,255,255 - The color of the grid.
  * @property {number} alpha=1 - The opacity of the grid.
- * @property {Entities.Pulse} pulse - Color and alpha pulse.
- *     <p class="important">Deprecated: This property is deprecated and will be removed.</p>
+ * @property {Entities.Pulse} pulse - <span class="important">Deprecated: This property is deprecated and will be removed.</span> 
+ *     <p>Color and alpha pulse.
  * @property {boolean} followCamera=true - <code>true</code> if the grid is always visible even as the camera moves to another
  *     position, <code>false</code> if it doesn't follow the camrmea.
  * @property {number} majorGridEvery=5 - Integer number of <code>minorGridEvery</code> intervals at which to draw a thick grid

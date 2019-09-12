@@ -64,7 +64,10 @@
     <section>
     <article>
         <div class="container-overview">
-            <?js if (doc.kind === 'module' && doc.modules) { ?>
+        
+            <?js if (isGlobalPage) {?>
+                
+            <?js } else if (doc.kind === 'module' && doc.modules) { ?>
                 <?js if (doc.description) { ?>
                     <h3>Description</h3>
                     <p><?js= doc.description ?></p>
@@ -76,6 +79,7 @@
             <?js } else if (doc.kind === 'class' || (doc.kind === 'namespace' && doc.signature)) { ?>
                 <h3>Description</h3>
                 <p><?js= doc.description ?></p>
+                <?js= self.partial('details.tmpl', doc) ?>
                 <table>
                     <thead>
                         <tr>
@@ -84,7 +88,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><code><?js= (doc.kind === 'class' ? 'new ' : '') + doc.name + (doc.signature || '') ?></code><p />
+                            <td><code><?js= (doc.kind === 'class' ? 'new ' : '') + doc.name + (doc.signature || '') ?></code>
                             <?js if (doc.params) { ?>
                                 <h3 class="paramHeading">Parameters</h3>
                                     <?js= self.partial('params.tmpl', doc.params) ?>
@@ -92,7 +96,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <?js= self.partial('details.tmpl', doc) ?>
+                                                          
 
                 <?js if (doc.examples && doc.examples.length) { ?>
                     <h3>Example<?js= doc.examples.length > 1? 's':'' ?></h3>
@@ -240,17 +244,17 @@
         <div class="typeDef">
             <h3 id="typeDef">Type Definitions</h3>
 
-            <?js typedefs.forEach(function(e) {
-                    if (e.signature) {
-                ?>
-                    <?js= self.partial('method.tmpl', e) ?>
-                <?js
-                    }
-                    else {
-                ?>
+            <?js typedefs.forEach(function(e) { ?>
+                                      
+                  
+                                                           
+                    
+                     
+                          
+                  
                     <?js= self.partial('members.tmpl', e) ?>
                 <?js
-                    }
+                     
                 }); ?>
             </div>
         <?js } ?>

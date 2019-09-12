@@ -25,13 +25,9 @@ var self = this;
             <tr>
                 <td>
                     <?js if (data.kind !== 'module' && !data.hideconstructor) { ?>
-                        <p>
-                            <?js= data.description ?>
-                            <?js= this.partial('details.tmpl', data) ?>
-                        </p>
+                        <?js= this.partial('memberDetails.tmpl', data) ?>
                     <?js } else { ?>
-                        <p style="color:red;">&nbsp;</p>
-                    <?js } ?>                    
+                    <?js } ?>   
 
                     <?js if (data.exceptions && exceptions.length) { ?>
                     <h3 class="subHeading">Throws:</h3>

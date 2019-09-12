@@ -12,7 +12,7 @@
 #include "QString"
 
 /**jsdoc
- * <p>Specifies how a web surface processes events.</p>
+ * Specifies how a web surface processes events.
  * <table>
  *   <thead>
  *     <tr><th>Value</th><th>Description</th></tr>

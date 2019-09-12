@@ -604,7 +604,7 @@ namespace std {
 }
 
 /**jsdoc
- * <p>The type of a collision contact event.</p>
+ * The type of a collision contact event.
  * <table>
  *   <thead>
  *     <tr><th>Value</th><th>Description</th></tr>
@@ -687,7 +687,8 @@ namespace graphics {
 using MeshPointer = std::shared_ptr<graphics::Mesh>;
 
 /**jsdoc
- * A handle for a mesh in an entity, such as returned by {@link Entities.getMeshes}.
+ * @deprecated Use the {@link Graphics} API instead.
+ * <p>A handle for a mesh in an entity, such as returned by {@link Entities.getMeshes}.</p>
  * @class MeshProxy
  *
  * @hifi-interface
@@ -695,8 +696,6 @@ using MeshPointer = std::shared_ptr<graphics::Mesh>;
  * @hifi-avatar
  * @hifi-server-entity
  * @hifi-assignment-client
- *
- * @deprecated Use the {@link Graphics} API instead.
  */
 class MeshProxy : public QObject {
     Q_OBJECT

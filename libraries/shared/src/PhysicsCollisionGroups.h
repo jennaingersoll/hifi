@@ -72,7 +72,7 @@ const int32_t BULLET_COLLISION_MASK_DETAILED_RAY = BULLET_COLLISION_GROUP_DETAIL
 const int32_t BULLET_COLLISION_MASK_COLLISIONLESS = 0;
 
 /**jsdoc
- * <p>A collision may occur with the following types of items:</p>
+ * A collision may occur with the following types of items:
  * <table>
  *   <thead>
  *     <tr><th>Value</th><th>Description</th>
@@ -87,7 +87,7 @@ const int32_t BULLET_COLLISION_MASK_COLLISIONLESS = 0;
  *   </tbody>
  * </table>
  * <p>The values for the collision types that are enabled are added together to give the CollisionMask value. For example, a
- * value of <code>31</code> means that an entity will collide with all item types.</p>
+ * value of <code>31</code> means that an entity will collide with all item types.
  * @typedef {number} CollisionMask
  */
 

@@ -100,8 +100,8 @@ void PointerEvent::setButton(Button button) {
  *     pressed when the event was generated.
  */
 /**jsdoc
- * <p>A KeyboardModifiers value is used to specify which modifier keys on the keyboard are pressed. The value is the sum 
- * (bitwise OR) of the relevant combination of values from the following table:</p>
+ * A KeyboardModifiers value is used to specify which modifier keys on the keyboard are pressed. The value is the sum 
+ * (bitwise OR) of the relevant combination of values from the following table:
  * <table>
  *   <thead>
  *     <tr><th>Key</th><th>Hexadecimal value</th><th>Decimal value</th><th>Description</th></tr>

@@ -117,7 +117,7 @@ public:
  *       <li><code>"entity_server"</code>: A server entity script.</li>
  *       <li><code>"agent"</code>: An assignment client script.</li>
  *     </ul>
- *     <em>Read-only.</em>
+ *     <p><em>Read-only.</em>
  */
 class ScriptEngine : public BaseScriptEngine, public EntitiesScriptEngineProvider {
     Q_OBJECT
@@ -163,10 +163,10 @@ public:
 
     /**jsdoc
      * Stops and unloads the current script.
-     * <p><strong>Warning:</strong> If an assignment client script, the script gets restarted after stopping.</p>
+     * <p><strong>Warning:</strong> If an assignment client script, the script gets restarted after stopping.
      * @function Script.stop
-     * @param {boolean} [marshal=false] - Marshal.
-     *     <p class="important">Deprecated: This parameter is deprecated and will be removed.</p>
+     * @param {boolean} [marshal=false] - <span class="important">Deprecated: This parameter is deprecated and 
+     *     will be removed.</span> <p>Marshal.
      * @example <caption>Stop a script after 5s.</caption>
      * Script.setInterval(function () {
      *     print("Hello");
@@ -321,7 +321,7 @@ public:
 
     /**jsdoc
      * Adds a function to the list of functions called when an entity event occurs on a particular entity.
-     * <p>See also, the {@link Entities} API.</p>
+     * <p>See also, the {@link Entities} API.
      * @function Script.addEventHandler
      * @param {Uuid} entityID - The ID of the entity.
      * @param {Script.EntityEvent} eventName - The name of the entity event.
@@ -345,7 +345,7 @@ public:
 
     /**jsdoc
      * Removes a function from the list of functions called when an entity event occurs on a particular entity.
-     * <p>See also, the {@link Entities} API.</p>
+     * <p>See also, the {@link Entities} API.
      * @function Script.removeEventHandler
      * @param {Uuid} entityID - The ID of the entity.
      * @param {Script.EntityEvent} eventName - The name of the entity event.
@@ -357,7 +357,7 @@ public:
      * Starts running another script in Interface, if it isn't already running. The script is not automatically loaded next 
      * time Interface starts.
      * <p class="availableIn"><strong>Supported Script Types:</strong> Interface Scripts &bull; Avatar Scripts</p>
-     * <p>See also, {@link ScriptDiscoveryService.loadScript}.</p>
+     * <p>See also, {@link ScriptDiscoveryService.loadScript}.
      * @function Script.load
      * @param {string} filename - The URL of the script to load. This can be relative to the current script's URL.
      * @example <caption>Load a script from another script.</caption>
@@ -500,13 +500,13 @@ public:
 
     /**jsdoc
      * Prints a message to the program log.
-     * <p>Alternatively, you can use {@link print}, {@link console.log}, or one of the other {@link console} methods.</p>
+     * <p>Alternatively, you can use {@link print}, {@link console.log}, or one of the other {@link console} methods.
      * @function Script.print
      * @param {string} message - The message to print.
      */
     /**jsdoc
      * Prints a message to the program log.
-     * <p>This is an alias of {@link Script.print}.</p>
+     * <p>This is an alias of {@link Script.print}.
      * @function print
      * @param {string} message - The message to print.
      */
@@ -848,7 +848,7 @@ signals:
 
     /**jsdoc
      * Triggered when the script starts for the user. See also, {@link Entities.preload}.
-     * <p class="availableIn"><strong>Supported Script Types:</strong> Client Entity Scripts &bull; Server Entity Scripts</p>
+     * <p class="availableIn"><strong>Supported Script Types:</strong> Client Entity Scripts &bull; Server Entity Scripts
      * @function Script.entityScriptPreloadFinished
      * @param {Uuid} entityID - The ID of the entity that the script is running in.
      * @returns {Signal}

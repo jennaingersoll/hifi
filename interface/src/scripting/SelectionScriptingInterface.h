@@ -197,7 +197,7 @@ public:
      * Enables highlighting for a selection list. All items in or subsequently added to the list are displayed with the 
      * highlight effect specified. The method can be called multiple times with different values in the style to modify the 
      * highlighting.
-     * <p>Note: This function implicitly calls {@link Selection.enableListToScene|enableListToScene}.</p>
+     * <p>Note: This function implicitly calls {@link Selection.enableListToScene|enableListToScene}.
      * @function Selection.enableListHighlight
      * @param {string} listName - The name of the selection list.
      * @param {Selection.HighlightStyle} highlightStyle - The highlight style.
@@ -207,7 +207,7 @@ public:
 
     /**jsdoc
      * Disables highlighting for a selection list.
-     * <p>Note: This function implicitly calls {@link Selection.disableListToScene|disableListToScene}.</p>
+     * <p>Note: This function implicitly calls {@link Selection.disableListToScene|disableListToScene}.
      * @function Selection.disableListHighlight
      * @param {string} listName - The name of the selection list.
      * @returns {boolean} <code>true</code> always.

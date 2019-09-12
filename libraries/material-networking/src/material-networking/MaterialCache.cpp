@@ -29,7 +29,7 @@ void NetworkMaterialResource::downloadFinished(const QByteArray& data) {
 }
 
 /**jsdoc
- * <p>An RGB or SRGB color value.</p>
+ * An RGB or SRGB color value.
  * <table>
  *   <thead>
  *     <tr><th>Index</th><th>Type</th><th>Attributes</th><th>Default</th><th>Value</th></tr>

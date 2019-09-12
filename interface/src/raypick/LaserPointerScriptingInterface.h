@@ -21,11 +21,11 @@ class LaserPointerScriptingInterface : public QObject, public Dependency {
     SINGLETON_DEPENDENCY
 
 /**jsdoc
+ * <p class="important">Deprecated: This API is deprecated. Use {@link Pointers} instead.</p>
  * The <code>LaserPointers</code> API is a subset of the {@link Pointers} API. It lets you create, manage, and visually 
  * represent objects for repeatedly calculating ray intersections with avatars, entities, and overlays. Ray pointers can also 
  * be configured to generate events on entities and overlays intersected.
  *
- * <p class="important">Deprecated: This API is deprecated. Use {@link Pointers} instead.
  *
  * @namespace LaserPointers
  *
@@ -44,7 +44,7 @@ public:
      * Creates a new ray pointer. The pointer can have a wide range of behaviors depending on the properties specified. For
      * example, it may be a static ray pointer, a mouse ray pointer, or joint ray pointer.
      * <p><strong>Warning:</strong> Pointers created using this method currently always intersect at least visible and
-     * collidable things but this may not always be the case.</p>
+     * collidable things but this may not always be the case.
      * @function LaserPointers.createLaserPointer
      * @param {Pointers.RayPointerProperties} properties - The properties of the pointer, including the properties of the 
      *     underlying pick that the pointer uses to do its picking.
@@ -66,7 +66,7 @@ public:
      * something.
      * <p><strong>Note:</strong> You can only edit the properties of the existing parts of the pointer; you cannot change the
      * type of any part.</p>
-     * <p><strong>Note:</strong> You cannot use this method to change the appearance of a default render state.</p>
+     * <p><strong>Note:</strong> You cannot use this method to change the appearance of a default render state.
      * @function LaserPointers.editRenderState
      * @param {number} id - The ID of the pointer.
      * @param {string} renderState - The name of the render state to edit.

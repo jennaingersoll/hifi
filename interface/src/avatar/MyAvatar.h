@@ -133,8 +133,8 @@ class MyAvatar : public Avatar {
      * @property {boolean} lookAtSnappingEnabled=true - <code>true</code> if the avatar's eyes snap to look at another avatar's
      *     eyes when the other avatar is in the line of sight and also has <code>lookAtSnappingEnabled == true</code>.
      * @property {string} skeletonModelURL - The avatar's FST file.
-     * @property {AttachmentData[]} attachmentData - Information on the avatar's attachments.
-     *     <p class="important">Deprecated: This property is deprecated and will be removed. Use avatar entities instead.</p>
+     * @property {AttachmentData[]} attachmentData - <span class="important">Deprecated: This property is deprecated and will 
+     *     be removed. Use avatar entities instead.</span> <p>Information on the avatar's attachments.
      * @property {string[]} jointNames - The list of joints in the current avatar model. <em>Read-only.</em>
      * @property {Uuid} sessionUUID - Unique ID of the avatar in the domain. <em>Read-only.</em>
      * @property {Mat4} sensorToWorldMatrix - The scale, rotation, and translation transform from the user's real world to the
@@ -180,8 +180,8 @@ class MyAvatar : public Avatar {
      *     property value is <code>audioListenerModeCustom</code>.
      * @property {Quat} customListenOrientation=Quat.IDENTITY - The listening orientation used when the
      *     <code>audioListenerMode</code> property value is <code>audioListenerModeCustom</code>.
-     * @property {boolean} hasScriptedBlendshapes=false - <code>true</code> to transmit blendshapes over the network.<br />
-     *     <strong>Note:</strong> Currently doesn't work. Use {@link MyAvatar.setForceFaceTrackerConnected} instead.
+     * @property {boolean} hasScriptedBlendshapes=false - <code>true</code> to transmit blendshapes over the network.
+     *     <p><strong>Note:</strong> Currently doesn't work. Use {@link MyAvatar.setForceFaceTrackerConnected} instead.
      * @property {boolean} hasProceduralBlinkFaceMovement=true - <code>true</code> if procedural blinking is turned on.
      * @property {boolean} hasProceduralEyeFaceMovement=true - <code>true</code> if procedural eye movement is turned on.
      * @property {boolean} hasAudioEnabledFaceMovement=true - <code>true</code> to move the mouth blendshapes with voice audio 
@@ -233,14 +233,13 @@ class MyAvatar : public Avatar {
      *     was set <code>false</code> because the zone may disallow collisionless avatars.
      * @property {boolean} otherAvatarsCollisionsEnabled - Set to <code>true</code> to enable the avatar to collide with other 
      *     avatars, <code>false</code> to disable collisions with other avatars.
-     * @property {boolean} characterControllerEnabled - Synonym of <code>collisionsEnabled</code>.
-     *     <p class="important">Deprecated: This property is deprecated and will be removed. Use <code>collisionsEnabled</code> 
-     *     instead.</p>
+     * @property {boolean} characterControllerEnabled - <span class="important">Deprecated: This property is deprecated and 
+     *     will be removed. Use <code>collisionsEnabled</code> instead.</span> <p>Synonym of <code>collisionsEnabled</code>.
      * @property {boolean} useAdvancedMovementControls - Returns and sets the value of the Interface setting, Settings > 
      *     Controls > Walking. Note: Setting the value has no effect unless Interface is restarted.
      * @property {boolean} showPlayArea - Returns and sets the value of the Interface setting, Settings > Controls > Show room 
-     *     boundaries while teleporting.<br />
-     *     <strong>Note:</strong> Setting the value has no effect unless Interface is restarted.
+     *     boundaries while teleporting.
+     *     <p><strong>Note:</strong> Setting the value has no effect unless Interface is restarted.
      *
      * @property {number} yawSpeed=75 - The mouse X sensitivity value in Settings > General. <em>Read-only.</em>
      * @property {number} pitchSpeed=50 - The mouse Y sensitivity value in Settings > General. <em>Read-only.</em>
@@ -267,7 +266,7 @@ class MyAvatar : public Avatar {
      *     {@link MyAvatar.getControlScheme|getControlScheme}).
      * @property {number} analogPlusWalkSpeed - The walk speed of your avatar for the "AnalogPlus" control scheme.
      *     <p><strong>Warning:</strong> Setting this value also sets the value of <code>analogPlusSprintSpeed</code> to twice 
-     *     the value.</p>
+     *     the value.
      * @property {number} analogPlusSprintSpeed - The sprint (run) speed of your avatar for the "AnalogPlus" control scheme.
      * @property {MyAvatar.SitStandModelType} userRecenterModel - Controls avatar leaning and recentering behavior.
      * @property {number} isInSittingState - <code>true</code> if your avatar is sitting (avatar leaning is disabled, 
@@ -537,7 +536,7 @@ public:
     /**jsdoc
      * Clears inverse kinematics joint limit history.
      * <p>The internal inverse-kinematics system maintains a record of which joints are "locked". Sometimes it is useful to 
-     * forget this history to prevent contorted joints, e.g., after finishing with an override animation.</p>
+     * forget this history to prevent contorted joints, e.g., after finishing with an override animation.
      * @function MyAvatar.clearIKJointLimitHistory
      */
     Q_INVOKABLE void clearIKJointLimitHistory(); // thread-safe
@@ -609,12 +608,12 @@ public:
      * <p>Note: When using pre-built animation data, it's critical that the joint orientation of the source animation and target 
      * rig are equivalent, since the animation data applies absolute values onto the joints. If the orientations are different, 
      * the avatar will move in unpredictable ways. For more information about avatar joint orientation standards, see 
-     * <a href="https://docs.highfidelity.com/create/avatars/avatar-standards">Avatar Standards</a>.</p>
+     * <a href="https://docs.highfidelity.com/create/avatars/avatar-standards">Avatar Standards</a>.
      * @function MyAvatar.overrideAnimation
      * @param {string} url - The URL to the animation file. Animation files may be in glTF or FBX format, but only need to 
      *     contain the avatar skeleton and animation data. glTF models may be in JSON or binary format (".gltf" or ".glb" URLs 
      *     respectively).
-     *     <p><strong>Warning:</strong> glTF animations currently do not always animate correctly.</p>
+     *     <p><strong>Warning:</strong> glTF animations currently do not always animate correctly.
      * @param {number} fps - The frames per second (FPS) rate for the animation playback. 30 FPS is normal speed.
      * @param {boolean} loop - <code>true</code> if the animation should loop, <code>false</code> if it shouldn't.
      * @param {number} firstFrame - The frame to start the animation at.
@@ -637,7 +636,7 @@ public:
      * @param {string} url - The URL of the animation file. Animation files need to be in glTF or FBX format, but only need to 
      *     contain the avatar skeleton and animation data. glTF models may be in JSON or binary format (".gltf" or ".glb" URLs 
      *     respectively).
-     *     <p><strong>Warning:</strong> glTF animations currently do not always animate correctly.</p>
+     *     <p><strong>Warning:</strong> glTF animations currently do not always animate correctly.
      * @param {number} fps - The frames per second (FPS) rate for the animation playback. 30 FPS is normal speed.
      * @param {boolean} loop - <code>true</code> if the animation should loop, <code>false</code> if it shouldn't.
      * @param {number} firstFrame - The frame to start the animation at.
@@ -657,7 +656,7 @@ public:
      * together with procedural data (such as look at vectors, hand sensors etc.). Playing your own custom animations will 
      * override the  default animations. <code>restoreAnimation()</code> is used to restore all motion from the default 
      * animation system including inverse kinematics for hand and head controllers. If you aren't currently playing an override 
-     * animation, this function has no effect.</p>
+     * animation, this function has no effect.
      * @function MyAvatar.restoreAnimation
      * @example <caption> Play a clapping animation on your avatar for three seconds. </caption>
      * var ANIM_URL = "https://s3.amazonaws.com/hifi-public/animations/ClapAnimations/ClapHands_Standing.fbx";
@@ -673,7 +672,7 @@ public:
      * <p>The avatar animation system includes a set of default animations along with rules for how those animations are blended
      * together with procedural data (such as look at vectors, hand sensors etc.). Playing your own custom animations will
      * override the  default animations. <code>restoreHandAnimation()</code> is used to restore the default hand poses.
-     * If you aren't currently playing an override hand animation, this function has no effect.</p>
+     * If you aren't currently playing an override hand animation, this function has no effect.
      * @function MyAvatar.restoreHandAnimation
      * @param isLeft {boolean} Set to true if using the left hand
      * @example <caption> Override left hand animation for three seconds. </caption>
@@ -691,7 +690,7 @@ public:
      * with procedural data (such as look at vectors, hand sensors etc.). Each animation specified in the avatar-animation.json 
      * file is known as an animation role. Animation roles map to easily understandable actions that the avatar can perform, 
      * such as <code>"idleStand"</code>, <code>"idleTalk"</code>, or <code>"walkFwd"</code>. <code>getAnimationRoles()</code> 
-     * is used get the list of animation roles defined in the avatar-animation.json.</p>
+     * is used get the list of animation roles defined in the avatar-animation.json.
      * @function MyAvatar.getAnimationRoles
      * @returns {string[]} Array of role strings.
      * @example <caption>Print the list of animation roles defined in the avatar's avatar-animation.json file to the debug log.</caption>
@@ -723,7 +722,7 @@ public:
      * @param {string} url - The URL to the animation file. Animation files need to be in glTF or FBX format, but only need to 
      *     contain the avatar skeleton and animation data. glTF models may be in JSON or binary format (".gltf" or ".glb" URLs 
      *     respectively).
-     *     <p><strong>Warning:</strong> glTF animations currently do not always animate correctly.</p>
+     *     <p><strong>Warning:</strong> glTF animations currently do not always animate correctly.
      * @param {number} fps - The frames per second (FPS) rate for the animation playback. 30 FPS is normal speed.
      * @param {boolean} loop - <code>true</code> if the animation should loop, <code>false</code> if it shouldn't.
      * @param {number} firstFrame - The frame the animation should start at.
@@ -937,7 +936,7 @@ public:
      * Requests that the hand touch effect is disabled for your avatar. Any resulting change in the status of the hand touch 
      * effect will be signaled by {@link MyAvatar.shouldDisableHandTouchChanged}.
      * <p>The hand touch effect makes the avatar's fingers adapt to the shape of any object grabbed, creating the effect that 
-     * it is really touching that object.</p>
+     * it is really touching that object.
      * @function MyAvatar.requestEnableHandTouch
      */
     Q_INVOKABLE void requestEnableHandTouch();
@@ -946,7 +945,7 @@ public:
      * Requests that the hand touch effect is enabled for your avatar. Any resulting change in the status of the hand touch
      * effect will be signaled by {@link MyAvatar.shouldDisableHandTouchChanged}.
      * <p>The hand touch effect makes the avatar's fingers adapt to the shape of any object grabbed, creating the effect that
-     * it is really touching that object.</p>
+     * it is really touching that object.
      * @function MyAvatar.requestDisableHandTouch
      */
     Q_INVOKABLE void requestDisableHandTouch();
@@ -954,7 +953,7 @@ public:
     /**jsdoc
      * Disables the hand touch effect on a specific entity.
      * <p>The hand touch effect makes the avatar's fingers adapt to the shape of any object grabbed, creating the effect that
-     * it is really touching that object.</p>
+     * it is really touching that object.
      * @function MyAvatar.disableHandTouchForID
      * @param {Uuid} entityID - The entity that the hand touch effect will be disabled for.
      */
@@ -963,7 +962,7 @@ public:
     /**jsdoc
      * Enables the hand touch effect on a specific entity.
      * <p>The hand touch effect makes the avatar's fingers adapt to the shape of any object grabbed, creating the effect that
-     * it is really touching that object.</p>
+     * it is really touching that object.
      * @function MyAvatar.enableHandTouchForID
      * @param {Uuid} entityID - The entity that the hand touch effect will be enabled for.
      */
@@ -1150,7 +1149,7 @@ public:
      * Gets the position of the avatar's left hand, relative to the avatar, as positioned by a hand controller (e.g., Oculus 
      * Touch or Vive).
      * <p>Note: The Leap Motion isn't part of the hand controller input system. (Instead, it manipulates the avatar's joints 
-     * for hand animation.)</p>
+     * for hand animation.)
      * @function MyAvatar.getLeftHandPosition
      * @returns {Vec3} The position of the left hand in avatar coordinates if positioned by a hand controller, otherwise 
      *     <code>{@link Vec3(0)|Vec3.ZERO}</code>.
@@ -1163,7 +1162,7 @@ public:
      * Gets the position of the avatar's right hand, relative to the avatar, as positioned by a hand controller (e.g., Oculus 
      * Touch or Vive).
      * <p>Note: The Leap Motion isn't part of the hand controller input system. (Instead, it manipulates the avatar's joints 
-     * for hand animation.)</p>
+     * for hand animation.)
      * @function MyAvatar.getRightHandPosition
      * @returns {Vec3} The position of the right hand in avatar coordinates if positioned by a hand controller, otherwise 
      *     <code>{@link Vec3(0)|Vec3.ZERO}</code>.
@@ -1196,7 +1195,7 @@ public:
      * hand controller (e.g., Oculus Touch or Vive).
      * <p>Note: The Leap Motion isn't part of the hand controller input system. (Instead, it manipulates the avatar's joints 
      * for hand animation.) If you are using the Leap Motion, the return value's <code>valid</code> property will be 
-     * <code>false</code> and any pose values returned will not be meaningful.</p>
+     * <code>false</code> and any pose values returned will not be meaningful.
      * @function MyAvatar.getLeftHandPose
      * @returns {Pose} The pose of the avatar's left hand, relative to the avatar, as positioned by a hand controller.
      * @example <caption>Report the pose of your avatar's left hand.</caption>
@@ -1209,7 +1208,7 @@ public:
      * hand controller (e.g., Oculus Touch or Vive).
      * <p>Note: The Leap Motion isn't part of the hand controller input system. (Instead, it manipulates the avatar's joints 
      * for hand animation.) If you are using the Leap Motion, the return value's <code>valid</code> property will be 
-     * <code>false</code> and any pose values returned will not be meaningful.</p>
+     * <code>false</code> and any pose values returned will not be meaningful.
      * @function MyAvatar.getRightHandPose
      * @returns {Pose} The pose of the avatar's right hand, relative to the avatar, as positioned by a hand controller. 
      * @example <caption>Report the pose of your avatar's right hand.</caption>
@@ -1222,7 +1221,7 @@ public:
      * positioned by a hand controller (e.g., Oculus Touch or Vive), and translated 0.3m along the palm.
      * <p>Note: Leap Motion isn't part of the hand controller input system. (Instead, it manipulates the avatar's joints
      * for hand animation.) If you are using Leap Motion, the return value's <code>valid</code> property will be
-     * <code>false</code> and any pose values returned will not be meaningful.</p>
+     * <code>false</code> and any pose values returned will not be meaningful.
      * @function MyAvatar.getLeftHandTipPose
      * @returns {Pose} The pose of the avatar's left hand, relative to the avatar, as positioned by a hand controller, and 
      *     translated 0.3m along the palm.
@@ -1234,7 +1233,7 @@ public:
      * positioned by a hand controller (e.g., Oculus Touch or Vive), and translated 0.3m along the palm.
      * <p>Note: Leap Motion isn't part of the hand controller input system. (Instead, it manipulates the avatar's joints
      * for hand animation.) If you are using Leap Motion, the return value's <code>valid</code> property will be
-     * <code>false</code> and any pose values returned will not be meaningful.</p>
+     * <code>false</code> and any pose values returned will not be meaningful.
      * @function MyAvatar.getRightHandTipPose
      * @returns {Pose} The pose of the avatar's right hand, relative to the avatar, as positioned by a hand controller, and
      *     translated 0.3m along the palm.
@@ -1261,7 +1260,7 @@ public:
 
     /**jsdoc
      * Sets and locks a joint's position and orientation.
-     * <p><strong>Note:</strong> Only works on the hips joint.</p>
+     * <p><strong>Note:</strong> Only works on the hips joint.
      * @function MyAvatar.pinJoint
      * @param {number} index - The index of the joint.
      * @param {Vec3} position - The position of the joint in world coordinates.
@@ -1274,7 +1273,7 @@ public:
 
     /**jsdoc
      * Clears a lock on a joint's position and orientation, as set by {@link MyAvatar.pinJoint|pinJoint}.
-     * <p><strong>Note:</strong> Only works on the hips joint.</p>
+     * <p><strong>Note:</strong> Only works on the hips joint.
      * @function MyAvatar.clearPinOnJoint
      * @param {number} index - The index of the joint.
      * @returns {boolean} <code>true</code> if the joint was unpinned, <code>false</code> if it wasn't.
@@ -1599,7 +1598,7 @@ public:
     /**jsdoc
      * Gets the avatar's collision capsule: a cylinder with hemispherical ends that approximates the extents or the avatar.
      * <p><strong>Warning:</strong> The values returned are in world coordinates but aren't necessarily up to date with the 
-     * avatar's current position.</p>
+     * avatar's current position.
      * @function MyAvatar.getCollisionCapsule
      * @returns {MyAvatar.CollisionCapsule} The avatar's collision capsule.
      */
@@ -2166,7 +2165,7 @@ public slots:
     /**jsdoc
      * Gets the URL of the override animation graph.
      * <p>See {@link https://docs.highfidelity.com/create/avatars/custom-animations.html|Custom Avatar Animations} for
-     * information on animation graphs.</p>
+     * information on animation graphs.
      * @function MyAvatar.getAnimGraphOverrideUrl
      * @returns {string} The URL of the override animation graph JSON file. <code>""</code> if there is no override animation 
      *     graph.
@@ -2176,7 +2175,7 @@ public slots:
     /**jsdoc
      * Sets the animation graph to use in preference to the default animation graph.
      * <p>See {@link https://docs.highfidelity.com/create/avatars/custom-animations.html|Custom Avatar Animations} for
-     * information on animation graphs.</p>
+     * information on animation graphs.
      * @function MyAvatar.setAnimGraphOverrideUrl
      * @param {string} url - The URL of the animation graph JSON file to use. Set to <code>""</code> to clear an override.
      */
@@ -2185,7 +2184,7 @@ public slots:
     /**jsdoc
      * Gets the URL of animation graph (i.e., the avatar animation JSON) that's currently being used for avatar animations.
      * <p>See {@link https://docs.highfidelity.com/create/avatars/custom-animations.html|Custom Avatar Animations} for 
-     * information on animation graphs.</p>
+     * information on animation graphs.
      * @function MyAvatar.getAnimGraphUrl
      * @returns {string} The URL of the current animation graph JSON file.
      * @Example <caption>Report the current avatar animation JSON being used.</caption>
@@ -2196,7 +2195,7 @@ public slots:
     /**jsdoc
      * Sets the current animation graph  (i.e., the avatar animation JSON) to use for avatar animations and makes it the default.
      * <p>See {@link https://docs.highfidelity.com/create/avatars/custom-animations.html|Custom Avatar Animations} for
-     * information on animation graphs.</p>
+     * information on animation graphs.
      * @function MyAvatar.setAnimGraphUrl
      * @param {string} url - The URL of the animation graph JSON file to use.
      */
@@ -2409,7 +2408,7 @@ signals:
 
     /**jsdoc
      * Triggered when the avatar's model (i.e., {@link MyAvatar|skeletonModelURL} property value) is changed.
-     * <p>Synonym of {@link MyAvatar.skeletonModelURLChanged|skeletonModelURLChanged}.</p>
+     * <p>Synonym of {@link MyAvatar.skeletonModelURLChanged|skeletonModelURLChanged}.
      * @function MyAvatar.skeletonChanged
      * @returns {Signal} 
      */
@@ -2462,7 +2461,7 @@ signals:
     /**jsdoc
      * Triggered when the hand touch effect is enabled or disabled for the avatar.
      * <p>The hand touch effect makes the avatar's fingers adapt to the shape of any object grabbed, creating the effect that
-     * it is really touching that object.</p>
+     * it is really touching that object.
      * @function MyAvatar.shouldDisableHandTouchChanged
      * @param {boolean} disabled - <code>true</code> if the hand touch effect is disabled for the avatar, 
      *     <code>false</code> if it isn't disabled.
@@ -2473,7 +2472,7 @@ signals:
     /**jsdoc
      * Triggered when the hand touch is enabled or disabled on a specific entity.
      * <p>The hand touch effect makes the avatar's fingers adapt to the shape of any object grabbed, creating the effect that
-     * it is really touching that object.</p>
+     * it is really touching that object.
      * @function MyAvatar.disableHandTouchForIDChanged
      * @param {Uuid} entityID - The entity that the hand touch effect has been enabled or disabled for.
      * @param {boolean} disabled - <code>true</code> if the hand touch effect is disabled for the entity,
